@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessClasses", "BusinessClasses\BusinessClasses.csproj", "{D1E050C9-EE43-4CD1-B99D-06711531859F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{EC6F0F51-A618-4005-8C13-8BEC00B7DF22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityProject", "EntityProject\EntityProject.csproj", "{06FE50E7-619A-46E9-8DAD-2F6AF90FF148}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsIndia", "NewsIndia\NewsIndia.csproj", "{9B172B49-762A-4570-BC5A-0C74C3C7C605}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsIndiaBAL", "NewsIndiaBAL\NewsIndiaBAL.csproj", "{1D9FA890-9A1E-43FC-9B34-91313F6B2BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsIndiaDAL", "NewsIndiaDAL\NewsIndiaDAL.csproj", "{C4B4DB46-30BD-49A4-8B8F-A059BD2C6454}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://karanneosoft.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BusinessClasses\\BusinessClasses.csproj
+		SccProjectName1 = BusinessClasses
+		SccLocalPath1 = BusinessClasses
+		SccProjectUniqueName2 = Common\\Common.csproj
+		SccProjectName2 = Common
+		SccLocalPath2 = Common
+		SccProjectUniqueName3 = EntityProject\\EntityProject.csproj
+		SccProjectName3 = EntityProject
+		SccLocalPath3 = EntityProject
+		SccProjectUniqueName4 = NewsIndia\\NewsIndia.csproj
+		SccProjectName4 = NewsIndia
+		SccLocalPath4 = NewsIndia
+		SccProjectUniqueName5 = NewsIndiaBAL\\NewsIndiaBAL.csproj
+		SccProjectName5 = NewsIndiaBAL
+		SccLocalPath5 = NewsIndiaBAL
+		SccProjectUniqueName6 = NewsIndiaDAL\\NewsIndiaDAL.csproj
+		SccProjectName6 = NewsIndiaDAL
+		SccLocalPath6 = NewsIndiaDAL
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1E050C9-EE43-4CD1-B99D-06711531859F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1E050C9-EE43-4CD1-B99D-06711531859F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E050C9-EE43-4CD1-B99D-06711531859F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1E050C9-EE43-4CD1-B99D-06711531859F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC6F0F51-A618-4005-8C13-8BEC00B7DF22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC6F0F51-A618-4005-8C13-8BEC00B7DF22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC6F0F51-A618-4005-8C13-8BEC00B7DF22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC6F0F51-A618-4005-8C13-8BEC00B7DF22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FE50E7-619A-46E9-8DAD-2F6AF90FF148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FE50E7-619A-46E9-8DAD-2F6AF90FF148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FE50E7-619A-46E9-8DAD-2F6AF90FF148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FE50E7-619A-46E9-8DAD-2F6AF90FF148}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B172B49-762A-4570-BC5A-0C74C3C7C605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B172B49-762A-4570-BC5A-0C74C3C7C605}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B172B49-762A-4570-BC5A-0C74C3C7C605}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B172B49-762A-4570-BC5A-0C74C3C7C605}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D9FA890-9A1E-43FC-9B34-91313F6B2BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D9FA890-9A1E-43FC-9B34-91313F6B2BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D9FA890-9A1E-43FC-9B34-91313F6B2BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D9FA890-9A1E-43FC-9B34-91313F6B2BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B4DB46-30BD-49A4-8B8F-A059BD2C6454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B4DB46-30BD-49A4-8B8F-A059BD2C6454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B4DB46-30BD-49A4-8B8F-A059BD2C6454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B4DB46-30BD-49A4-8B8F-A059BD2C6454}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

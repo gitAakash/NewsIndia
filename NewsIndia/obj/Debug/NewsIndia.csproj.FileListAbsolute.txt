@@ -1,0 +1,439 @@
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\NewsIndia.dll.config
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Antlr3.Runtime.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\EntityFramework.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\EntityFramework.SqlServer.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.AspNet.Identity.Core.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.AspNet.Identity.Owin.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Cookies.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Facebook.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Google.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.OAuth.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Twitter.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Web.Infrastructure.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Newtonsoft.Json.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Owin.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Helpers.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Mvc.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Optimization.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Razor.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.WebPages.Deployment.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.WebPages.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.WebPages.Razor.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\WebGrease.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Helpers.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Mvc.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Optimization.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.Razor.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.WebPages.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.WebPages.Deployment.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\System.Web.WebPages.Razor.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Newtonsoft.Json.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Antlr3.Runtime.pdb
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\EntityFramework.SqlServer.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.AspNet.Identity.Core.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Facebook.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Cookies.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.OAuth.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Google.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.Twitter.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\obj\Debug\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\obj\Debug\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\BusinessClasses.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\EntityProject.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\NewsIndiaBAL.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\NewsIndiaDAL.dll
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\BusinessClasses.pdb
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\EntityProject.pdb
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\NewsIndiaBAL.pdb
+H:\My Projects\NewsIndia\NewsIndia\NewsIndia\bin\NewsIndiaDAL.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\NewsIndia.dll.config
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Antlr3.Runtime.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\BusinessClasses.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Common.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\EntityFramework.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\EntityFramework.SqlServer.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\EntityProject.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.AspNet.Identity.Core.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.AspNet.Identity.Owin.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Cookies.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Facebook.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Google.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.OAuth.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Twitter.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Web.Infrastructure.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\NewsIndiaBAL.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Newtonsoft.Json.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Owin.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Helpers.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Mvc.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Optimization.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Razor.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.WebPages.Deployment.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.WebPages.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.WebPages.Razor.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\WebGrease.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\NewsIndiaDAL.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\BusinessClasses.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Common.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\EntityProject.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\NewsIndiaBAL.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Helpers.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Mvc.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Optimization.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.Razor.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.WebPages.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.WebPages.Deployment.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\System.Web.WebPages.Razor.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Newtonsoft.Json.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Antlr3.Runtime.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\EntityFramework.SqlServer.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.AspNet.Identity.Core.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Facebook.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Cookies.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.OAuth.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Google.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.Twitter.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\bin\NewsIndiaDAL.pdb
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\obj\Debug\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndiaNewSvn\NewsIndia\obj\Debug\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\obj\Debug\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\NewsIndia.dll.config
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Antlr3.Runtime.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\BusinessClasses.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Common.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\EntityFramework.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\EntityFramework.SqlServer.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\EntityProject.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.AspNet.Identity.Core.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.AspNet.Identity.Owin.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Host.SystemWeb.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Cookies.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Facebook.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Google.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.OAuth.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Twitter.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Web.Infrastructure.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\NewsIndiaBAL.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Newtonsoft.Json.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Owin.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Helpers.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Mvc.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Optimization.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Razor.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.WebPages.Deployment.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.WebPages.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.WebPages.Razor.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\WebGrease.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\NewsIndiaDAL.dll
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\BusinessClasses.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Common.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\EntityProject.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\NewsIndiaBAL.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Helpers.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Mvc.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Optimization.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.Razor.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.WebPages.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.WebPages.Deployment.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\System.Web.WebPages.Razor.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Newtonsoft.Json.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Antlr3.Runtime.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\EntityFramework.SqlServer.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.AspNet.Identity.Core.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Facebook.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Cookies.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.OAuth.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Google.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.Twitter.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\bin\NewsIndiaDAL.pdb
+H:\My Projects\NewsIndia\NewsIndiaSVN\NewsIndia\obj\Debug\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\obj\Debug\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\obj\Debug\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\NewsIndia.dll.config
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\NewsIndia.dll
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\NewsIndia.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\BusinessClasses.dll
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Common.dll
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\EntityProject.dll
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\NewsIndiaBAL.dll
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\NewsIndiaDAL.dll
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\BusinessClasses.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Common.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\EntityProject.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\NewsIndiaBAL.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\System.Web.Helpers.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\System.Web.Mvc.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\System.Web.Optimization.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\System.Web.Razor.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\System.Web.WebPages.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\System.Web.WebPages.Deployment.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\System.Web.WebPages.Razor.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Newtonsoft.Json.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Antlr3.Runtime.pdb
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\EntityFramework.SqlServer.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.AspNet.Identity.Core.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.AspNet.Identity.Owin.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Host.SystemWeb.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Security.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Security.Facebook.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Security.Cookies.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Security.OAuth.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Security.Google.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Security.Twitter.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+H:\My Projects\NewsIndia\NewsIndiaGIT\NewsIndia\bin\NewsIndiaDAL.pdb
+D:\GitNewsIndia\NewsIndia\bin\NewsIndia.dll.config
+D:\GitNewsIndia\NewsIndia\bin\NewsIndia.dll
+D:\GitNewsIndia\NewsIndia\bin\NewsIndia.pdb
+D:\GitNewsIndia\NewsIndia\bin\BusinessClasses.dll
+D:\GitNewsIndia\NewsIndia\bin\Common.dll
+D:\GitNewsIndia\NewsIndia\bin\EntityProject.dll
+D:\GitNewsIndia\NewsIndia\bin\NewsIndiaBAL.dll
+D:\GitNewsIndia\NewsIndia\bin\NewsIndiaDAL.dll
+D:\GitNewsIndia\NewsIndia\bin\BusinessClasses.pdb
+D:\GitNewsIndia\NewsIndia\bin\Common.pdb
+D:\GitNewsIndia\NewsIndia\bin\EntityProject.pdb
+D:\GitNewsIndia\NewsIndia\bin\NewsIndiaBAL.pdb
+D:\GitNewsIndia\NewsIndia\bin\NewsIndiaDAL.pdb
+D:\GitNewsIndia\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+D:\GitNewsIndia\NewsIndia\obj\Debug\NewsIndia.dll
+D:\GitNewsIndia\NewsIndia\obj\Debug\NewsIndia.pdb
+I:\TFS\NewsIndia\NewsIndia\bin\NewsIndia.dll.config
+I:\TFS\NewsIndia\NewsIndia\bin\NewsIndia.dll
+I:\TFS\NewsIndia\NewsIndia\bin\NewsIndia.pdb
+I:\TFS\NewsIndia\NewsIndia\bin\BusinessClasses.dll
+I:\TFS\NewsIndia\NewsIndia\bin\Common.dll
+I:\TFS\NewsIndia\NewsIndia\bin\EntityProject.dll
+I:\TFS\NewsIndia\NewsIndia\bin\NewsIndiaBAL.dll
+I:\TFS\NewsIndia\NewsIndia\bin\NewsIndiaDAL.dll
+I:\TFS\NewsIndia\NewsIndia\bin\BusinessClasses.pdb
+I:\TFS\NewsIndia\NewsIndia\bin\Common.pdb
+I:\TFS\NewsIndia\NewsIndia\bin\EntityProject.pdb
+I:\TFS\NewsIndia\NewsIndia\bin\NewsIndiaBAL.pdb
+I:\TFS\NewsIndia\NewsIndia\bin\NewsIndiaDAL.pdb
+I:\TFS\NewsIndia\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+I:\TFS\NewsIndia\NewsIndia\obj\Debug\NewsIndia.dll
+I:\TFS\NewsIndia\NewsIndia\obj\Debug\NewsIndia.pdb
+F:\UncleNews\NewsIndia\bin\NewsIndia.dll.config
+F:\UncleNews\NewsIndia\bin\NewsIndia.dll
+F:\UncleNews\NewsIndia\bin\NewsIndia.pdb
+F:\UncleNews\NewsIndia\bin\BusinessClasses.dll
+F:\UncleNews\NewsIndia\bin\Common.dll
+F:\UncleNews\NewsIndia\bin\EntityProject.dll
+F:\UncleNews\NewsIndia\bin\NewsIndiaBAL.dll
+F:\UncleNews\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+F:\UncleNews\NewsIndia\bin\NewsIndiaDAL.dll
+F:\UncleNews\NewsIndia\bin\BusinessClasses.pdb
+F:\UncleNews\NewsIndia\bin\Common.pdb
+F:\UncleNews\NewsIndia\bin\EntityProject.pdb
+F:\UncleNews\NewsIndia\bin\NewsIndiaBAL.pdb
+F:\UncleNews\NewsIndia\bin\NewsIndiaDAL.pdb
+F:\UncleNews\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+F:\UncleNews\NewsIndia\obj\Debug\NewsIndia.dll
+F:\UncleNews\NewsIndia\obj\Debug\NewsIndia.pdb
+E:\UnclePro\NewsIndia\bin\NewsIndia.dll.config
+E:\UnclePro\NewsIndia\bin\NewsIndia.dll
+E:\UnclePro\NewsIndia\bin\NewsIndia.pdb
+E:\UnclePro\NewsIndia\bin\BusinessClasses.dll
+E:\UnclePro\NewsIndia\bin\Common.dll
+E:\UnclePro\NewsIndia\bin\EntityProject.dll
+E:\UnclePro\NewsIndia\bin\NewsIndiaBAL.dll
+E:\UnclePro\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+E:\UnclePro\NewsIndia\bin\NewsIndiaDAL.dll
+E:\UnclePro\NewsIndia\bin\BusinessClasses.pdb
+E:\UnclePro\NewsIndia\bin\Common.pdb
+E:\UnclePro\NewsIndia\bin\EntityProject.pdb
+E:\UnclePro\NewsIndia\bin\NewsIndiaBAL.pdb
+E:\UnclePro\NewsIndia\bin\NewsIndiaDAL.pdb
+E:\UnclePro\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+E:\UnclePro\NewsIndia\obj\Debug\NewsIndia.dll
+E:\UnclePro\NewsIndia\obj\Debug\NewsIndia.pdb
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndia.dll.config
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndia.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndia.pdb
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\BusinessClasses.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\Common.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\EntityProject.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaBAL.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaDAL.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\BusinessClasses.pdb
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\Common.pdb
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\EntityProject.pdb
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaBAL.pdb
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaDAL.pdb
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\obj\Debug\NewsIndia.dll
+I:\TFS\NewsIndiaTFSLatest\NewsIndia\obj\Debug\NewsIndia.pdb
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndia.dll.config
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndia.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndia.pdb
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\BusinessClasses.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\Common.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\EntityProject.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaBAL.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaDAL.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\BusinessClasses.pdb
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\Common.pdb
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\EntityProject.pdb
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaBAL.pdb
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\bin\NewsIndiaDAL.pdb
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\obj\Debug\NewsIndia.dll
+F:\NewsLatest\NewsIndiaTFSLatest\NewsIndiaTFSLatest\NewsIndia\obj\Debug\NewsIndia.pdb
+E:\UncleLatest\7.15.2015\NewsIndia\bin\NewsIndia.dll.config
+E:\UncleLatest\7.15.2015\NewsIndia\bin\NewsIndia.dll
+E:\UncleLatest\7.15.2015\NewsIndia\bin\NewsIndia.pdb
+E:\UncleLatest\7.15.2015\NewsIndia\bin\BusinessClasses.dll
+E:\UncleLatest\7.15.2015\NewsIndia\bin\Common.dll
+E:\UncleLatest\7.15.2015\NewsIndia\bin\EntityProject.dll
+E:\UncleLatest\7.15.2015\NewsIndia\bin\NewsIndiaBAL.dll
+E:\UncleLatest\7.15.2015\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+E:\UncleLatest\7.15.2015\NewsIndia\bin\NewsIndiaDAL.dll
+E:\UncleLatest\7.15.2015\NewsIndia\bin\BusinessClasses.pdb
+E:\UncleLatest\7.15.2015\NewsIndia\bin\Common.pdb
+E:\UncleLatest\7.15.2015\NewsIndia\bin\EntityProject.pdb
+E:\UncleLatest\7.15.2015\NewsIndia\bin\NewsIndiaBAL.pdb
+E:\UncleLatest\7.15.2015\NewsIndia\bin\NewsIndiaDAL.pdb
+E:\UncleLatest\7.15.2015\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+E:\UncleLatest\7.15.2015\NewsIndia\obj\Debug\NewsIndia.dll
+E:\UncleLatest\7.15.2015\NewsIndia\obj\Debug\NewsIndia.pdb
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\NewsIndia.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\NewsIndia.pdb
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\BusinessClasses.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\Common.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\EntityProject.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\NewsIndiaBAL.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\NewsIndiaDAL.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\BusinessClasses.pdb
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\Common.pdb
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\EntityProject.pdb
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\NewsIndiaBAL.pdb
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\bin\NewsIndiaDAL.pdb
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\obj\Debug\NewsIndia.dll
+E:\Akshay\7.15.2015\7.15.2015\NewsIndia\obj\Debug\NewsIndia.pdb
+I:\TFS\7.17.2015ak\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+I:\TFS\7.17.2015ak\NewsIndia\obj\Debug\NewsIndia.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\NewsIndia.dll.config
+I:\TFS\7.17.2015ak\NewsIndia\bin\NewsIndia.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\NewsIndia.pdb
+I:\TFS\7.17.2015ak\NewsIndia\bin\BusinessClasses.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\Common.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\EntityProject.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\NewsIndiaBAL.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\NewsIndiaDAL.dll
+I:\TFS\7.17.2015ak\NewsIndia\bin\BusinessClasses.pdb
+I:\TFS\7.17.2015ak\NewsIndia\bin\Common.pdb
+I:\TFS\7.17.2015ak\NewsIndia\bin\EntityProject.pdb
+I:\TFS\7.17.2015ak\NewsIndia\bin\NewsIndiaBAL.pdb
+I:\TFS\7.17.2015ak\NewsIndia\bin\NewsIndiaDAL.pdb
+I:\TFS\7.17.2015ak\NewsIndia\obj\Debug\NewsIndia.pdb
+I:\TFS\7.17.2015ak\NewsIndia\obj\Debug\NewsIndia.Properties.Resources.resources
+I:\TFS\7.17.2015ak\NewsIndia\obj\Debug\NewsIndia.csproj.GenerateResource.Cache
+I:\TFS\7.18.2015Karan\NewsIndia\bin\NewsIndia.dll.config
+I:\TFS\7.18.2015Karan\NewsIndia\bin\NewsIndia.dll
+I:\TFS\7.18.2015Karan\NewsIndia\bin\NewsIndia.pdb
+I:\TFS\7.18.2015Karan\NewsIndia\bin\BusinessClasses.dll
+I:\TFS\7.18.2015Karan\NewsIndia\bin\Common.dll
+I:\TFS\7.18.2015Karan\NewsIndia\bin\EntityProject.dll
+I:\TFS\7.18.2015Karan\NewsIndia\bin\NewsIndiaBAL.dll
+I:\TFS\7.18.2015Karan\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+I:\TFS\7.18.2015Karan\NewsIndia\bin\NewsIndiaDAL.dll
+I:\TFS\7.18.2015Karan\NewsIndia\bin\BusinessClasses.pdb
+I:\TFS\7.18.2015Karan\NewsIndia\bin\Common.pdb
+I:\TFS\7.18.2015Karan\NewsIndia\bin\EntityProject.pdb
+I:\TFS\7.18.2015Karan\NewsIndia\bin\NewsIndiaBAL.pdb
+I:\TFS\7.18.2015Karan\NewsIndia\bin\NewsIndiaDAL.pdb
+I:\TFS\7.18.2015Karan\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+I:\TFS\7.18.2015Karan\NewsIndia\obj\Debug\NewsIndia.Properties.Resources.resources
+I:\TFS\7.18.2015Karan\NewsIndia\obj\Debug\NewsIndia.csproj.GenerateResource.Cache
+I:\TFS\7.18.2015Karan\NewsIndia\obj\Debug\NewsIndia.dll
+I:\TFS\7.18.2015Karan\NewsIndia\obj\Debug\NewsIndia.pdb
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\NewsIndia.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\NewsIndia.pdb
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\BusinessClasses.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\Common.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\EntityProject.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\NewsIndiaBAL.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\NewsIndiaDAL.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\BusinessClasses.pdb
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\Common.pdb
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\EntityProject.pdb
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\NewsIndiaBAL.pdb
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\bin\NewsIndiaDAL.pdb
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.Properties.Resources.resources
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.csproj.GenerateResource.Cache
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.dll
+E:\Akshay\7.19.2015Karan\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.pdb
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\NewsIndia.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\NewsIndia.pdb
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\BusinessClasses.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\Common.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\EntityProject.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\NewsIndiaBAL.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\ASPSnippets.SmsAPI.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\NewsIndiaDAL.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\BusinessClasses.pdb
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\Common.pdb
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\EntityProject.pdb
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\NewsIndiaBAL.pdb
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\bin\NewsIndiaDAL.pdb
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.csprojResolveAssemblyReference.cache
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.Properties.Resources.resources
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.csproj.GenerateResource.Cache
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.dll
+E:\Akshay\20.07.2015Akshay\7.19.2015Karan\NewsIndia\obj\Debug\NewsIndia.pdb

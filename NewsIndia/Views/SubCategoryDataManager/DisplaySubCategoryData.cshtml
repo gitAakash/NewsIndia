@@ -1,0 +1,499 @@
+﻿@using BusinessClasses
+@model SubCategoryDataInfoModel
+@{
+
+    ViewBag.Title = "DisplaySubCategoryData";
+    var activeCategories = (List<ActiveCategory>)ViewBag.ActiveCategoryInfo;
+}
+<style>
+    .h1Custom {
+        font-size: 25px !important;
+    }
+</style>
+@*<script src="~/Scripts/jquery-1.11.2.min.js"></script>*@
+<link href="~/Content/dataTables.bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.js"></script>
+<link href="~/Content/ViewCss/SubCategoryMaster.css" rel="stylesheet" />
+<script src="~/ckeditor/ckeditor.js"></script>
+@*<link href="~/Content/fileUpload/jquery.fileupload.css" rel="stylesheet" />
+    <script src="~/Scripts/fileUpload/jquery.ui.widget.js"></script>
+    <script src="~/Scripts/fileUpload/jquery.iframe-transport.js"></script>
+    <script src="~/Scripts/fileUpload/jquery.fileupload.js"></script>*@
+@*<script src="~/Scripts/fileUpload/main.js"></script>*@
+
+<link href="@Url.Content("~/Content/fileUpload/jquery.fileupload.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/fileUpload/blueimp-gallery.min.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/fileUpload/jquery.fileupload-ui.css")" rel="stylesheet" />
+
+
+<script src="@Url.Content("~/Scripts/fileUpload/jquery.ui.widget.js")"></script>
+@* <script src="@Url.Content("~/Scripts/jquery.browser.min.js")"></script>*@
+
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script src=@Url.Content("~/Scripts/fileUpload/tmpl.min.js")></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src=@Url.Content("~/Scripts/fileUpload/load-image.all.min.js")></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src=@Url.Content("~/Scripts/fileUpload/canvas-to-blob.min.js")></script>
+<!-- Bootstrap JS is not required, but included for the responsive demo navigation -->
+<script src=@Url.Content("~/Scripts/bootstrap.min.js")></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<!-- blueimp Gallery script -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.blueimp-gallery.min.js")></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<!-- The basic File Upload plugin -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.fileupload.js")></script>
+<!-- The File Upload processing plugin -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.fileupload-process.js")></script>
+<!-- The File Upload image preview & resize plugin -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.fileupload-image.js")></script>
+<!-- The File Upload audio preview plugin -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.fileupload-audio.js")></script>
+<!-- The File Upload video preview plugin -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.fileupload-video.js")></script>
+<!-- The File Upload validation plugin -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.fileupload-validate.js")></script>
+<!-- The File Upload user interface plugin -->
+<script src=@Url.Content("~/Scripts/fileUpload/jquery.fileupload-ui.js")></script>
+
+<script src="@Url.Content("~/Content/fancyBox/source/jquery.fancybox.js")"></script>
+
+<script src="@Url.Content("~/Content/fancyBox/source/helpers/jquery.fancybox-buttons.js")"></script>
+
+<script src="@Url.Content("~/Content/fancyBox/source/helpers/jquery.fancybox-thumbs.js")"></script>
+
+<script src="@Url.Content("~/Content/fancyBox/source/helpers/jquery.fancybox-media.js")"></script>
+
+
+
+
+
+
+
+<div class="CategoryMasterMainDiv">
+    <div class="page-header" style="margin: auto !important">
+        <h1 id="tables" style="text-align: center"> @(ViewBag.IsEdit ? "Edit Sub-Category Data" : "Add Sub-Category Data")</h1>
+
+    </div>
+    <div class="modal-body">
+        <h1 style="text-align: left" class="h1Custom">Title</h1>
+        @*  <input type="text" placeholder="Title" id="txtSubCategoryDataName" class="form-control" data-container="body" data-placement="right" style="max-width: none !important" data-content="Please Enter Title!!!">*@
+        @Html.TextBoxFor(model => model.Title, new { @id = "txtSubCategoryDataName", @class = "form-control", @placeholder = "Title", @style = "max-width: none !important", @data_placement = "bottom", @data_content = "Please Enter Title!!!" })
+        <h1 style="text-align: left" class="h1Custom">Category Name</h1>
+        <select class="form-control " style="max-width: none !important" id="ddlCategory" data-content="Please Select Category!!!">
+            <option value="0">Category Name</option>
+            @foreach (var category in activeCategories)
+            {
+                <option value="@category.CategoryId">@category.CategoryName</option>
+            }
+        </select>
+        <h1 style="text-align: left" class="h1Custom">Sub-Category Name</h1>
+        <select class="form-control " style="max-width: none !important" id="ddlSubCategory" data-content="Please Select SubCategory!!!">
+            <option value="0">SubCategory Name</option>
+        </select>
+
+
+        <h1 style="text-align: left" class="h1Custom">Description</h1>
+        @Html.TextAreaFor(m => m.Description, new { id = "Description", @rows = "10", @cols = "80", @style = "width: 100% !important;max-width: 100% !important" })
+        @* <textarea name="NewsDescription" id="NewsDescription" rows="10" cols="80" style="width: 100% !important;max-width: 100% !important"></textarea>*@
+        <input type="checkbox" id="chkIsVisible" name="IsVisible" style="margin-top: 3%;margin-right: 1%;">Show SubCategory Data
+    </div>
+        <hr />Select Files to be Shown
+        @*<span class="btn btn-success fileinput-button">
+                <i class="glyphicon glyphicon-plus"></i>
+                <span>Select files...</span>
+                <!-- The file input field used as target for the file upload widget -->
+               @* <input id="fileupload" type="file" name="files[]" multiple="">
+            </span>
+            <br>
+            <br>
+            <!-- The global progress bar -->
+            <div id="progress" class="progress">
+                <div class="progress-bar progress-bar-success"></div>
+            </div>
+            <!-- The container for the uploaded files -->
+            <div id="files" class="files"></div>*@
+        @*<br>*@
+        @* Files to be uploaded *@
+        <div class="col col-lg-2 pull-left">
+            <div id="fileupload" style="margin-top: 20px;">
+                <span class="btn btn-success fileinput-button">
+                    <i class="glyphicon glyphicon-plus"></i>
+                    <span>Add files...</span>
+                    @*<input id="fileupload" type="file" name="files[]" multiple="" onchange="SetFileName(this)">
+                        <input name="UploadedFileNames" type="hidden">*@
+                    @Html.TextBoxFor(model => model.Attachments, new { @type = "file", onchange = "SetFileName(this)" })
+                    @*<input id="fileupload" type="file" name="files[]" multiple="" onchange="SetFileName(this)">*@
+                    @Html.HiddenFor(model => model.UploadedFileNames, new { @id = "UploadedFileNames" })
+                    @Html.HiddenFor(model => model.TimeStamp, new { @id = "TimeStamp" })
+                    @Html.HiddenFor(model => model.SubCategoryDataId, new { @id = "SubCategoryDataId" })
+                </span>
+                <span class="fileupload-process"></span>
+            </div>
+        </div>
+        <div class="col col-lg-12 ">
+            <table role="presentation" class="table table-striped">
+                <tbody class="Table1">
+                    @if (Model.Files != null)
+                    {
+                        foreach (var attachment in Model.Files)
+                        {
+                            <tr class="template-download fade in" id="img_@(attachment.Split('\\')[1])">
+                                <td>
+                                    <span class="preview">
+
+                                        <a href="@Url.Content("/AttachmentUploads/"+attachment)" title="@(attachment.Split('\\')[1])" download="@(attachment.Split('\\')[1])" data-gallery="">
+                                            <img style="width: 80px; height: 61px" src="/AttachmentUploads/@attachment">
+                                        </a>
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <p class="name">
+
+                                        <a href="@Url.Content("/AttachmentUploads/"+attachment)" title="@(attachment.Split('\\')[1])" title="@(attachment.Split('\\')[1])" download="@(attachment.Split('\\')[1])" data-gallery="">@(attachment.Split('\\')[1])</a>
+
+                                    </p>
+
+                                </td>
+                                <td>
+                                    <span class="size">3.20 KB</span>
+                                </td>
+                                <td>
+
+                                    <button class="btn btn-danger delete" onclick=" RemoveFile('@(attachment.Split('\\')[1])', 'img_@(attachment.Split('\\')[1])') ">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                        <span>Delete</span>
+                                    </button>
+
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+        <script id="template-upload" type="text/x-tmpl">
+            {% for (var i=0, file; file=o.files[i]; i++) { %}
+            <tr class="template-upload fade">
+                <td>
+                    <span class="preview"></span>
+                </td>
+                <td>
+                    <p class="name">{%=file.name%}</p>
+                    <strong class="error text-danger"></strong>
+                </td>
+                <td>
+                    <p class="size">Processing...</p>
+                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="progress-bar progress-bar-success" style="width:0%;"></div>
+                    </div>
+                </td>
+                <td>
+                    {% if (!i && !o.options.autoUpload) { %}
+                    <button class="btn btn-primary start" disabled>
+                        <i class="glyphicon glyphicon-upload"></i>
+                        <span>Start</span>
+                    </button>
+                    {% } %}
+                    {% if (!i) { %}
+                    <button class="btn btn-warning cancel">
+                        <i class="glyphicon glyphicon-ban-circle"></i>
+                        <span>Cancel</span>
+                    </button>
+                    {% } %}
+                </td>
+            </tr>
+            {% } %}
+        </script>
+
+        <script id="template-download" type="text/x-tmpl">
+            {% for (var i=0, file; file=o.files[i]; i++) { %}
+            <tr class="template-download fade">
+                <td>
+                    <span class="preview">
+                        {% if (file.thumbnailUrl) { %}
+                        <a href="{%=file.thumbnailUrl%}" title="{%=file.name%}" download="{%=file.name%}" data-gallery>
+                            <img style="width:80px; height:61px" src="{%=file.thumbnailUrl%}">
+                        </a>
+                        {% } %}
+                    </span>
+                </td>
+                <td>
+                    <p class="name">
+                        {% if (file.url) { %}
+                        <a href="{%=file.url%}" title="{%=file.name%}" download="{%=file.name%}" {%=file.thumbnailUrl?'data-gallery':'file.thumbnailUrl'%}>{%=file.name%}</a>
+                        {% } else { %}
+                        <span>{%=file.name%}</span>
+                        {% } %}
+                    </p>
+                    {% if (file.error) { %}
+                    <div><span class="label label-danger">Error</span> {%=file.error%}</div>
+                    {% } %}
+                </td>
+                <td>
+                    <span class="size">{%=o.formatFileSize(file.size)%}</span>
+                </td>
+                <td>
+                    {% if (file.deleteUrl) { %}
+                    <button class="btn btn-danger delete" data-type="{%=file.deleteType%}" data-url="{%=file.deleteUrl%}" {% if (file.deletewithcredentials) { %} data-xhr-fields='{"withCredentials":true}' {% } %}>
+                        <i class="glyphicon glyphicon-trash"></i>
+                        <span>Delete</span>
+                    </button>
+                    {% } else { %}
+                    <button class="btn btn-warning cancel">
+                        <i class="glyphicon glyphicon-ban-circle"></i>
+                        <span>Cancel</span>
+                    </button>
+                    {% } %}
+                </td>
+            </tr>
+            {% } %}
+        </script>
+
+        <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-filter=":even">
+            <div class="slides"></div>
+            <h3 class="title"></h3>
+            <a class="prev">‹</a>
+            <a class="next">›</a>
+            <a class="close">×</a>
+            <a class="play-pause"></a>
+            <ol class="indicator"></ol>
+        </div>
+
+    
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" onclick=" window.history.back()">Close</button>
+        <button type="button" class="btn btn-primary" id="btnSaveChanges">Save changes</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+    var categoryId =@Model.CategoryId;
+    var subCategoryID=@Model.SubCategoryId;
+    var IsVisble=@(Model.IsVisible?"true":"false");
+
+    $(document).ready(function() {
+        debugger;
+        if (categoryId != 0) {
+            CategoryChange(categoryId, subCategoryID);
+            $("#ddlCategory").val(categoryId).attr("selected", "selected");
+            document.getElementById("chkIsVisible").checked = IsVisble;
+            $("#UploadedFileNames").val($("#UploadedFileNames").val().substring(0, $("#UploadedFileNames").val().length - 1));
+        }
+    });
+
+
+    $("#btnSaveChanges").click(function() {
+        debugger;
+        if (CheckValidation()) {
+            var SubCategoryDataDetail = {
+                SubCategoryDataId: $('#SubCategoryDataId').val(),
+                Title: $('#txtSubCategoryDataName').val(),
+                //    Description: CKEDITOR.instances['NewsDescription'].getData(),
+                //Attachments:null,
+                SubCategoryId: $("#ddlSubCategory").val(),
+                UploadedFileNames: $('#UploadedFileNames').val(),
+                IsVisible: $('#chkIsVisible').prop('checked'),
+                TimeStamp: $('#TimeStamp').val(),
+
+            };
+
+
+//string description,bool isVisible,
+            //    int SubCategoryId,string timestamp,string UploadedFileNames,string title, int subCategoryDataId = 0
+
+
+            $("#divLoading").show();
+            $('#TimeStamp').val();
+
+
+            $.ajax({
+                url: '@Url.Action("AddEditSubCategoryData", "SubCategoryDataManager")' /*'/SubCategoryDataManager/AddEditSubCategoryData'*/,
+            type: "POST",
+            data: {
+                description: $('#Description').val(),
+                // JSON.stringify(CKEDITOR.instances['NewsDescription'].getData().substring(0, CKEDITOR.instances['NewsDescription'].getData().length - 1)),
+                isVisible: $('#chkIsVisible').prop('checked'),
+                SubCategoryId: $("#ddlSubCategory").val(),
+                timestamp: $('#TimeStamp').val(),
+                UploadedFileNames: $('#UploadedFileNames').val(),
+                title: $('#txtSubCategoryDataName').val(),
+                subCategoryDataId: $('#SubCategoryDataId').val() == "" ? "0" : $('#SubCategoryDataId').val()
+                
+            },
+            success: function (data) {
+                debugger;
+                if (data) {
+                    showNotification("Data Saved Sucessfully", "success");
+                    window.location = "/SubCategoryDataManager/SubCategoryDataMaster";
+                }
+                $("#divLoading").hide();
+
+            },
+            error: function (data) {
+                showNotification("Error while Communicating with server.", "warning");
+                $("#divLoading").hide();
+            }
+        });
+}
+    });
+
+
+
+    function RemoveFile(fileName,tag) {
+        debugger;
+        var selectedFileName = fileName;
+        var value = $('#UploadedFileNames').val();
+        var previousValueArray = value.split(',');
+        var newValue = "";
+        for (var i = 0; i < previousValueArray.length; i++) {
+            if (previousValueArray[i] != selectedFileName) {
+                if (newValue == '') {
+                    newValue = previousValueArray[i];
+                } else {
+                    newValue = newValue + "," + previousValueArray[i];
+                }
+            }
+        }
+        $('#UploadedFileNames').attr('value', "");
+        $('#UploadedFileNames').attr('value', newValue);
+        document.getElementById(tag).style.display = "none";
+    }
+
+
+
+
+    function RemoveImage(data) {
+        var selectedFileName = data.url.substring(data.url.lastIndexOf('\\') + 1);
+        var value = $('#UploadedFileNames').val();
+        var previousValueArray = value.split(',');
+        var newValue = "";
+        for (var i = 0; i < previousValueArray.length; i++) {
+            if (previousValueArray[i] != selectedFileName) {
+                if (newValue == '') {
+                    newValue = previousValueArray[i];
+                } else {
+                    newValue = newValue + "," + previousValueArray[i];
+                }
+            }
+        }
+        $('#UploadedFileNames').attr('value', "");
+        $('#UploadedFileNames').attr('value', newValue);
+
+    }
+    function CheckValidation() {
+        $("#txtSubCategoryDataName").popover('hide');
+        $("#ddlCategory").popover('hide');
+        $("#Description").popover('hide');
+        $("#ddlSubCategory").popover('hide');
+
+        if ($("#txtSubCategoryDataName").val() == "") {
+            $("#txtSubCategoryDataName").attr("data-content", "Please Enter Title!!!");
+            $("#txtSubCategoryDataName").popover('show');
+            $("#txtSubCategoryDataName").focus();
+            return false;
+        }
+        else if ($("#ddlCategory").val() == "0") {
+            $("#ddlCategory").popover('show');
+            $("#ddlCategory").focus();
+            return false;
+        }
+        else if  ($("#ddlSubCategory").val() == "0"){
+            $("#ddlSubCategory").popover('show');
+            $("#ddlSubCategory").focus();
+            return false;
+        }
+        else if  ($("#Description").val() == ""){
+            $("#Description").attr("data-content", "Please Enter Description!!!");
+            $("#Description").popover('show');
+            $("#Description").focus();
+            return false;
+        }
+        return true;
+
+
+    }
+    function SetFileName(id) {
+        debugger;
+        var fup = document.getElementById(id.id);
+        var fileName = fup.value;
+        var selectedFileName = fileName.substring(fileName.lastIndexOf('\\') + 1);
+        if ($('#UploadedFileNames').val() == '') {
+            $('#UploadedFileNames').attr('value', selectedFileName);
+        } else {
+            var previousValue = $('#UploadedFileNames').val() + "," + selectedFileName;
+            $('#UploadedFileNames').attr('value', previousValue);
+        }
+    }
+
+    $('#fileupload').fileupload({
+        autoUpload: true,
+        url: '/SubCategoryDataManager/SaveUpload/',
+        filesContainer: '.Table1',
+        disableImageResize: /Android(?!.*Chrome)|Opera/
+            .test(window.navigator.userAgent),
+        //acceptFileTypes: /(\.|\/)(gif|jpe?g|png|doc|docx|xls?x|bmp|ppt|pptx|pdf)$/i,
+        acceptFileTypes: /(\.|\/)(gif|jpeg|jpg|png|doc|docx|xlsx|xls|bmp|ppt|pptx|pdf|txt|pdf|java|php|cs|css|js|cshtml|ctp|tpl|xml|apk|rb|html.erb|haml|css.scss|js.coffee|yml)$/i,
+        maxRetries: 100,
+        retryTimeout: 500,
+    });
+
+
+
+
+
+
+
+
+
+
+    //CKEDITOR.replace('editor1');
+    //  CKEDITOR.replace('NewsDescription');
+
+
+    $("#ddlCategory").change(function () {
+        CategoryChange( $("#ddlCategory").val(),0);
+    });
+
+    var TempSubCategoryID = 0;
+    function CategoryChange(categoryID,subCategoryID) {
+        TempSubCategoryID = subCategoryID;
+        $("#divLoading").show();
+        $.ajax({
+            url: '/SubCategoryDataManager/GetSubCategories',
+            type: "POST",
+            data: { categoryId:categoryID  },
+            success: function (data) {
+                debugger;
+                document.getElementById("ddlSubCategory").innerHTML = "";
+                var ddldata = "<option value=" + 0 + ">SubCategory Name</option>";
+                $(ddldata).appendTo('#ddlSubCategory');
+                $.each(data, function (i, obj) {
+
+                    ddldata = "<option value=" + obj.SubCategoryId + ">" + obj.SubCategoryName + "</option>";
+                    $(ddldata).appendTo('#ddlSubCategory');
+                });
+                if(TempSubCategoryID!=0)
+                    $("#ddlSubCategory").val(TempSubCategoryID).attr("selected", "selected");
+                $("#divLoading").hide();
+
+            },
+            error: function (data) {
+                showNotification("Error while Communicating with server.", "warning");
+                $("#divLoading").hide();
+            }
+        });
+
+        $("#ddlCategory").popover('hide');
+    }
+
+</script>

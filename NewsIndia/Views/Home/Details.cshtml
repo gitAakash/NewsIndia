@@ -1,0 +1,131 @@
+﻿@using BusinessClasses
+@model BusinessClasses.SubCategoryModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var t = AttachmentType.Image;
+}
+@*<div class="col-lg-pull-10">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video style="height: 50%;width: 40%;" class="embed-responsive-item" src="~/Content/Video/testVideo.mp4"></video>
+        </div>
+    </div>*@
+<style>
+    .bx-wrapper .bx-prev {
+        left: 10px !important;
+    }
+</style>
+<head>
+    <title>Video.js | HTML5 Video Player</title>
+    <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.bxslider.js"></script>
+    <link href="~/Content/video-js.css" rel="stylesheet" />
+    <script src="~/Scripts/video.js"></script>
+</head>
+<div class="news-sec-1 float-width">
+    <div class="float-width sec-cont2">
+         @if (Model.Attachments.Any(m=>m.FileType==AttachmentType.Video))
+         {
+             <h3 class="sec-title">MUSIC NEWS</h3>
+             <div class="sec-1-big float-width">
+                 <video id="example_video_1" class="video-js vjs-default-skin blocky"
+                        controls preload="auto" width="100%" height="305"
+                        poster="http://video-js.zencoder.com/oceans-clip.png"
+                        data-setup='{"example_option":true}'>
+                     <source src=@Url.Content("/AttachmentUploads/" + Model.Attachments.FirstOrDefault(m => m.FileType == AttachmentType.Video).FileName) type='video/mp4'/>
+                     @* <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm'/>
+                     <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg'/>*@
+                     <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                     </p>
+                 </video>
+                 <div class="sec-1-big-text lefty">
+                     <h3>@Url.Content(Model.Title)</h3>
+                     <h6><span><i class="fa fa-user"></i>John Doe</span><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                     <p>@Url.Content(Model.Description)</p>
+                 </div>
+             </div>
+         }
+         else
+         {
+
+<div class="artcl-body float-width">
+                  <h2>@Url.Content(Model.Title)</h2>
+                  <h5>
+                     <span><i class="fa fa-user"></i>John Doe</span>
+                     <span><i class="fa fa-clock-o"></i>20 Jan 2014</span>
+                     <span><i class="fa fa-comment-o"></i>21 comments</span>
+                  </h5>
+                  <article class="float-width articl-data">
+                     <img alt="" src=@Url.Content("/AttachmentUploads/" + Model.Attachments.FirstOrDefault(m => m.FileType == AttachmentType.Image).FileName)>
+                     <p class="artcl-qt">
+                        <i class="fa fa-quote-left"></i>
+                        <span>
+                        @Url.Content(Model.Description)                         
+                        </span>
+                     </p>
+                  </article>
+               </div>
+         }
+    </div>
+</div>
+
+@if (Model.Attachments.Select(m=>m.FileType==AttachmentType.Image).Count()>6)
+{
+    <div class="qk-slider float-width">
+        <h3 class="sldr-title">slider</h3>
+        <div class="flexslider news-sldr">
+            <div class="flex-viewport" style="overflow: hidden; position: relative;">
+                <ul class="slides" style="-webkit-transform: translate3d(0px, 0px, 0px); -webkit-transition-duration: 2.5s; transform: translate3d(0px, 0px, 0px); transition-duration: 2.5s; width: 1600%;">
+                    @foreach (var item in Model.Attachments)
+                    {
+                        if (item.FileType == AttachmentType.Image)
+                        {
+                            <li style="display: block; float: left; width: 250px; width: 250px;">
+                                <div class="trans2 slide-sngl">
+                                    <a class="text-center" href="#">
+                                        <img alt="" src="@Url.Content("/AttachmentUploads/" + @Url.Content(item.FileName))" draggable="false">
+                                    </a>
+                                    <h4>
+                                        <a style="text-overflow: ellipsis" href="#">sdfs</a>
+                                    </h4>
+                                    <p>asdfsaf</p>
+                                    <h6>
+                                        <span><i class="fa fa-clock-o"></i>20 Jan 2014</span></h6>
+                                </div>
+                            </li>
+                        }
+                    }
+
+                </ul>
+            </div><ul class="flex-direction-nav">
+                <li>
+                    <a class="flex-prev" href="#"></a>
+                </li><li>
+                    <a class="flex-next" href="#"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+}
+else
+{
+<div class="flkr-cont lefty">
+               <h3 class="sec-title">More Images</h3>
+    <div>
+        @foreach(var item in Model.Attachments.Where(m=>m.FileType==AttachmentType.Image))
+        {
+            <a href="#">
+                <img src=@Url.Content("/AttachmentUploads/" + @Url.Content(item.FileName))>
+            </a>
+}
+       
+      
+    </div>
+            </div>
+}
+<script type="text/javascript">
+    $(function () {
+        $('.bxSlider').bxSlider({ minSlides: 1, maxSlides: 4, slideWidth: 194, slideMargin: 10, adaptiveHeight: true, auto: true, autoControls: true });
+    });
+
+</script>

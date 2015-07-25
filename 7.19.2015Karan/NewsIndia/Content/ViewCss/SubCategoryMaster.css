@@ -1,0 +1,37 @@
+.TableBody {
+    /*font-size: 140%;*/
+}
+
+.TextAlign {
+    text-align: center;
+}
+
+.RowTextCss {
+    color: rgb(81, 78, 73);
+    font-weight: bold;
+}
+.PopUpDropDown {
+    margin-top: 3%
+}
+.popover {
+    border-color: red !important;
+}
+
+.ActionImages {
+    width: 32px;
+}
+
+@media screen and (max-width: 900px) {
+ .CategoryMasterMainDiv {
+     margin-top: auto;
+}
+}
+
+.CategoryMasterMainDiv {
+    /*margin-top: -5%;*/
+}
+
+tbody {
+    /*height: 100px;*/ /* Just for the demo          */
+   
+}

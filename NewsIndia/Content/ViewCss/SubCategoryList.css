@@ -1,0 +1,71 @@
+﻿.MediaThumbnail {
+    /*width: 14%;*/
+      width: 15% !important;
+    float: left;
+}
+
+.SubCategoryDetailPara {
+    width: 67%;
+}
+
+.ListItemDiv {
+}
+.ellipsis {
+  width: 100%;
+  margin: 0 0 1em 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.truncate {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ImageThumbnail {
+    width: 13% !important;
+    height: 128px !important;
+    margin-top: 1% !important;
+    margin-right: 1% !important;
+}
+.NoData {
+    text-align: center
+}
+.NoDataImg {
+    width: 18%;
+    margin-left: 41%
+}
+@media screen and (max-width: 990px) {
+    .ImageThumbnail {
+        width: 30% !important;
+        height: auto !important;
+         margin-right: auto;margin-left: 35%;
+         float: none
+    }
+    .MediaThumbnail {
+    /*width: 30% !important;*/
+    margin-right: auto;margin-left: 35%;
+    float: none
+}
+    .SubCategoryDetailPara {
+        width: 100%;
+    }
+    .SubCategoryTitle {
+        text-align: center
+    }
+}
+
+a {
+    color: #777777;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #777777;
+        text-decoration: none;
+        cursor: pointer;
+    }

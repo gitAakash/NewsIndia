@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "User Master";
+    //Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<link href="~/Content/dataTables.bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.js"></script>
+<link href="~/Content/ViewCss/UserMaster.css" rel="stylesheet" />
+
+<div class="UserMasterMainDiv">
+    <div class="page-header" style="margin: auto !important">
+        <h1 id="tables" style="text-align: center">User Master</h1>
+
+
+        <input type="text" class="form-control" style="float:left;width: 41%" placeholder="Search User" id="txtSearchUser">
+        <button type="submit" class="btn btn-default" style="margin-left:1% ">Search</button>
+        <a class="btn btn-default" style="float:right" href="~/UserManager/AddEditUser">Add User</a>
+
+
+
+
+    </div>
+    <div id="divUserTable">
+        @{ Html.RenderAction("ShowUserTable");}
+    </div>
+
+    @* PopUpDivs *@
+
+    @*<div class="modal " id="popup">
+            <div class="modal-dialog center">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title center">Modal title</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="Category Name" id="txtCategoryName" class="form-control" data-container="body" data-placement="right" data-content="Looks like this  category is already Present!!!">
+                        <input type="checkbox" id="chkIsVisible" style="margin-top: 3%;margin-right: 1%;">Show Category
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="btnSaveChanges">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+
+    @* Till Here PopupDiv *@
+    <script src="~/Scripts/ViewScript/UserMaster.js"></script>
+
+
+</div>

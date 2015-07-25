@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="dc6d59e825614092825ab9eb27c4025d" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="NewsIndiaTVModel.Attachment" Width="1.5" PointX="12.25" PointY="7" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.AuthenticationLink" Width="1.5" PointX="3" PointY="10.125" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.CategoryMaster" Width="1.5" PointX="7.75" PointY="2.875" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.Country" Width="1.5" PointX="0.75" PointY="4.25" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.SideBannerMaster" Width="1.5" PointX="7.75" PointY="6" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.State" Width="1.5" PointX="3" PointY="4" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.SubCategoryDataAttachment" Width="1.5" PointX="14.5" PointY="2.625" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.SubCategoryDataMaster" Width="1.5" PointX="12.25" PointY="2.125" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.SubCategoryMaster" Width="1.5" PointX="10" PointY="2.625" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.UserMaster" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.UserRole" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="NewsIndiaTVModel.Verification" Width="1.5" PointX="0.75" PointY="10.375" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_SubCategoryDataAttachment_Attachment" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_AuthenticationLinks_Verification" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_SubCategoryMaster_CategoryMaster" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_State_Country1" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_UserMaster_Country" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_State_UserMaster" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_State_UserMaster1" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_UserMaster_State" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_SubCategoryDataAttachment_SubCategoryDataMaster" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_SubCategoryDataMaster_SubCategoryMaster" />
+        <AssociationConnector Association="NewsIndiaTVModel.FK_UserMaster_UserMaster" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

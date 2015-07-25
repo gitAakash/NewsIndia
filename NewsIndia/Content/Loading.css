@@ -1,0 +1,27 @@
+﻿.Loading {
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    opacity: 1.0;
+    transition: opacity 0.15s linear;
+    box-sizing: border-box;
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #2c3e50;
+}
+
+.InnerLoading {
+    left: 38% !important;
+    width: 16% !important;
+    position: absolute !important;
+    top: 35% !important;
+}
+.ImageLoading {
+    width: 100% !important;
+}
+

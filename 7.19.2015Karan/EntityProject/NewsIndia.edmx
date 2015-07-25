@@ -1,0 +1,881 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="NewsIndiaTVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Attachment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AuthenticationLinks">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VerificationTypeId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UnqiueLink" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="IsUsed" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CategoryMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryName" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="varchar" MaxLength="50" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SideBannerMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImageName" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="URL" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateId" />
+          </Key>
+          <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StateName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" Nullable="false" />
+          <Property Name="ModifiedOn" Type="datetime" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubCategoryDataAttachments">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubCategoryDataID" Type="int" Nullable="false" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="AttachmentID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubCategoryDataMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="SavedTimeStamp" Type="varchar" MaxLength="500" />
+          <Property Name="SubmittedDate" Type="datetime" />
+          <Property Name="SubCategoryId" Type="int" Nullable="false" />
+          <Property Name="IsSuperAdminApproved" Type="bit" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubCategoryMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="SubCategoryName" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="IsVisible" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="500" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="500" />
+          <Property Name="Email" Type="nvarchar" MaxLength="500" />
+          <Property Name="Password" Type="nvarchar" MaxLength="500" />
+          <Property Name="DateOfBirth" Type="date" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="10" />
+          <Property Name="Gender" Type="bit" />
+          <Property Name="City" Type="nvarchar" MaxLength="500" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="StateID" Type="int" Nullable="false" />
+          <Property Name="Address" Type="nvarchar" MaxLength="80" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="HasUserAccess" Type="bit" />
+          <Property Name="HasMenuAccess" Type="bit" />
+          <Property Name="HasNewsAccess" Type="bit" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="6" />
+          <Property Name="CreatedBy" Type="int" />
+          <Property Name="CreatedOn" Type="datetime" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedOn" Type="datetime" />
+          <Property Name="IsEnabled" Type="bit" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="500" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Verification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="VerificationType" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_AuthenticationLinks_Verification">
+          <End Role="Verification" Type="Self.Verification" Multiplicity="1" />
+          <End Role="AuthenticationLinks" Type="Self.AuthenticationLinks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AuthenticationLinks">
+              <PropertyRef Name="VerificationTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country1">
+          <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+          <End Role="State" Type="Self.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_UserMaster">
+          <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="1" />
+          <End Role="State" Type="Self.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserMaster">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_UserMaster1">
+          <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="1" />
+          <End Role="State" Type="Self.State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserMaster">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategoryDataAttachment_Attachment">
+          <End Role="Attachment" Type="Self.Attachment" Multiplicity="1" />
+          <End Role="SubCategoryDataAttachments" Type="Self.SubCategoryDataAttachments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attachment">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryDataAttachments">
+              <PropertyRef Name="AttachmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategoryDataAttachment_SubCategoryDataMaster">
+          <End Role="SubCategoryDataMaster" Type="Self.SubCategoryDataMaster" Multiplicity="1" />
+          <End Role="SubCategoryDataAttachments" Type="Self.SubCategoryDataAttachments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategoryDataMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryDataAttachments">
+              <PropertyRef Name="SubCategoryDataID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategoryDataMaster_SubCategoryMaster">
+          <End Role="SubCategoryMaster" Type="Self.SubCategoryMaster" Multiplicity="1" />
+          <End Role="SubCategoryDataMaster" Type="Self.SubCategoryDataMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategoryMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryDataMaster">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategoryMaster_CategoryMaster">
+          <End Role="CategoryMaster" Type="Self.CategoryMaster" Multiplicity="1" />
+          <End Role="SubCategoryMaster" Type="Self.SubCategoryMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryMaster">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMaster_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="1" />
+          <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMaster_State">
+          <End Role="State" Type="Self.State" Multiplicity="1" />
+          <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMaster_UserMaster">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+          <End Role="UserMaster" Type="Self.UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NewsIndiaTVModelStoreContainer">
+          <EntitySet Name="Attachment" EntityType="Self.Attachment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AuthenticationLinks" EntityType="Self.AuthenticationLinks" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CategoryMaster" EntityType="Self.CategoryMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SideBannerMaster" EntityType="Self.SideBannerMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubCategoryDataAttachments" EntityType="Self.SubCategoryDataAttachments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubCategoryDataMaster" EntityType="Self.SubCategoryDataMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubCategoryMaster" EntityType="Self.SubCategoryMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserMaster" EntityType="Self.UserMaster" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Verification" EntityType="Self.Verification" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AuthenticationLinks_Verification" Association="Self.FK_AuthenticationLinks_Verification">
+            <End Role="Verification" EntitySet="Verification" />
+            <End Role="AuthenticationLinks" EntitySet="AuthenticationLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country1" Association="Self.FK_State_Country1">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_UserMaster" Association="Self.FK_State_UserMaster">
+            <End Role="UserMaster" EntitySet="UserMaster" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_UserMaster1" Association="Self.FK_State_UserMaster1">
+            <End Role="UserMaster" EntitySet="UserMaster" />
+            <End Role="State" EntitySet="State" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategoryDataAttachment_Attachment" Association="Self.FK_SubCategoryDataAttachment_Attachment">
+            <End Role="Attachment" EntitySet="Attachment" />
+            <End Role="SubCategoryDataAttachments" EntitySet="SubCategoryDataAttachments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategoryDataAttachment_SubCategoryDataMaster" Association="Self.FK_SubCategoryDataAttachment_SubCategoryDataMaster">
+            <End Role="SubCategoryDataMaster" EntitySet="SubCategoryDataMaster" />
+            <End Role="SubCategoryDataAttachments" EntitySet="SubCategoryDataAttachments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategoryDataMaster_SubCategoryMaster" Association="Self.FK_SubCategoryDataMaster_SubCategoryMaster">
+            <End Role="SubCategoryMaster" EntitySet="SubCategoryMaster" />
+            <End Role="SubCategoryDataMaster" EntitySet="SubCategoryDataMaster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategoryMaster_CategoryMaster" Association="Self.FK_SubCategoryMaster_CategoryMaster">
+            <End Role="CategoryMaster" EntitySet="CategoryMaster" />
+            <End Role="SubCategoryMaster" EntitySet="SubCategoryMaster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMaster_Country" Association="Self.FK_UserMaster_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="UserMaster" EntitySet="UserMaster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMaster_State" Association="Self.FK_UserMaster_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="UserMaster" EntitySet="UserMaster" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMaster_UserMaster" Association="Self.FK_UserMaster_UserMaster">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="UserMaster" EntitySet="UserMaster" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NewsIndiaTVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="NewsIndiaTVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Attachments" EntityType="NewsIndiaTVModel.Attachment" />
+          <EntitySet Name="AuthenticationLinks" EntityType="NewsIndiaTVModel.AuthenticationLink" />
+          <EntitySet Name="CategoryMasters" EntityType="NewsIndiaTVModel.CategoryMaster" />
+          <EntitySet Name="Countries" EntityType="NewsIndiaTVModel.Country" />
+          <EntitySet Name="SideBannerMasters" EntityType="NewsIndiaTVModel.SideBannerMaster" />
+          <EntitySet Name="States" EntityType="NewsIndiaTVModel.State" />
+          <EntitySet Name="SubCategoryDataAttachments" EntityType="NewsIndiaTVModel.SubCategoryDataAttachment" />
+          <EntitySet Name="SubCategoryDataMasters" EntityType="NewsIndiaTVModel.SubCategoryDataMaster" />
+          <EntitySet Name="SubCategoryMasters" EntityType="NewsIndiaTVModel.SubCategoryMaster" />
+          <EntitySet Name="UserMasters" EntityType="NewsIndiaTVModel.UserMaster" />
+          <EntitySet Name="UserRoles" EntityType="NewsIndiaTVModel.UserRole" />
+          <EntitySet Name="Verifications" EntityType="NewsIndiaTVModel.Verification" />
+          <AssociationSet Name="FK_SubCategoryDataAttachment_Attachment" Association="NewsIndiaTVModel.FK_SubCategoryDataAttachment_Attachment">
+            <End Role="Attachment" EntitySet="Attachments" />
+            <End Role="SubCategoryDataAttachment" EntitySet="SubCategoryDataAttachments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AuthenticationLinks_Verification" Association="NewsIndiaTVModel.FK_AuthenticationLinks_Verification">
+            <End Role="Verification" EntitySet="Verifications" />
+            <End Role="AuthenticationLink" EntitySet="AuthenticationLinks" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategoryMaster_CategoryMaster" Association="NewsIndiaTVModel.FK_SubCategoryMaster_CategoryMaster">
+            <End Role="CategoryMaster" EntitySet="CategoryMasters" />
+            <End Role="SubCategoryMaster" EntitySet="SubCategoryMasters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_Country1" Association="NewsIndiaTVModel.FK_State_Country1">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="State" EntitySet="States" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMaster_Country" Association="NewsIndiaTVModel.FK_UserMaster_Country">
+            <End Role="Country" EntitySet="Countries" />
+            <End Role="UserMaster" EntitySet="UserMasters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_UserMaster" Association="NewsIndiaTVModel.FK_State_UserMaster">
+            <End Role="UserMaster" EntitySet="UserMasters" />
+            <End Role="State" EntitySet="States" />
+          </AssociationSet>
+          <AssociationSet Name="FK_State_UserMaster1" Association="NewsIndiaTVModel.FK_State_UserMaster1">
+            <End Role="UserMaster" EntitySet="UserMasters" />
+            <End Role="State" EntitySet="States" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMaster_State" Association="NewsIndiaTVModel.FK_UserMaster_State">
+            <End Role="State" EntitySet="States" />
+            <End Role="UserMaster" EntitySet="UserMasters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategoryDataAttachment_SubCategoryDataMaster" Association="NewsIndiaTVModel.FK_SubCategoryDataAttachment_SubCategoryDataMaster">
+            <End Role="SubCategoryDataMaster" EntitySet="SubCategoryDataMasters" />
+            <End Role="SubCategoryDataAttachment" EntitySet="SubCategoryDataAttachments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SubCategoryDataMaster_SubCategoryMaster" Association="NewsIndiaTVModel.FK_SubCategoryDataMaster_SubCategoryMaster">
+            <End Role="SubCategoryMaster" EntitySet="SubCategoryMasters" />
+            <End Role="SubCategoryDataMaster" EntitySet="SubCategoryDataMasters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserMaster_UserMaster" Association="NewsIndiaTVModel.FK_UserMaster_UserMaster">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="UserMaster" EntitySet="UserMasters" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Attachment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="SubCategoryDataAttachments" Relationship="NewsIndiaTVModel.FK_SubCategoryDataAttachment_Attachment" FromRole="Attachment" ToRole="SubCategoryDataAttachment" />
+        </EntityType>
+        <EntityType Name="AuthenticationLink">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VerificationTypeId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UnqiueLink" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsUsed" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Verification" Relationship="NewsIndiaTVModel.FK_AuthenticationLinks_Verification" FromRole="AuthenticationLink" ToRole="Verification" />
+        </EntityType>
+        <EntityType Name="CategoryMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="SubCategoryMasters" Relationship="NewsIndiaTVModel.FK_SubCategoryMaster_CategoryMaster" FromRole="CategoryMaster" ToRole="SubCategoryMaster" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="States" Relationship="NewsIndiaTVModel.FK_State_Country1" FromRole="Country" ToRole="State" />
+          <NavigationProperty Name="UserMasters" Relationship="NewsIndiaTVModel.FK_UserMaster_Country" FromRole="Country" ToRole="UserMaster" />
+        </EntityType>
+        <EntityType Name="SideBannerMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImageName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="URL" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="StateId" />
+          </Key>
+          <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StateName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Country" Relationship="NewsIndiaTVModel.FK_State_Country1" FromRole="State" ToRole="Country" />
+          <NavigationProperty Name="UserMaster" Relationship="NewsIndiaTVModel.FK_State_UserMaster" FromRole="State" ToRole="UserMaster" />
+          <NavigationProperty Name="UserMaster1" Relationship="NewsIndiaTVModel.FK_State_UserMaster1" FromRole="State" ToRole="UserMaster" />
+          <NavigationProperty Name="UserMasters" Relationship="NewsIndiaTVModel.FK_UserMaster_State" FromRole="State" ToRole="UserMaster" />
+        </EntityType>
+        <EntityType Name="SubCategoryDataAttachment">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubCategoryDataID" Type="Int32" Nullable="false" />
+          <Property Name="FileName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="AttachmentID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Attachment" Relationship="NewsIndiaTVModel.FK_SubCategoryDataAttachment_Attachment" FromRole="SubCategoryDataAttachment" ToRole="Attachment" />
+          <NavigationProperty Name="SubCategoryDataMaster" Relationship="NewsIndiaTVModel.FK_SubCategoryDataAttachment_SubCategoryDataMaster" FromRole="SubCategoryDataAttachment" ToRole="SubCategoryDataMaster" />
+        </EntityType>
+        <EntityType Name="SubCategoryDataMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="SavedTimeStamp" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SubmittedDate" Type="DateTime" Precision="3" />
+          <Property Name="SubCategoryId" Type="Int32" Nullable="false" />
+          <Property Name="IsSuperAdminApproved" Type="Boolean" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="SubCategoryDataAttachments" Relationship="NewsIndiaTVModel.FK_SubCategoryDataAttachment_SubCategoryDataMaster" FromRole="SubCategoryDataMaster" ToRole="SubCategoryDataAttachment" />
+          <NavigationProperty Name="SubCategoryMaster" Relationship="NewsIndiaTVModel.FK_SubCategoryDataMaster_SubCategoryMaster" FromRole="SubCategoryDataMaster" ToRole="SubCategoryMaster" />
+        </EntityType>
+        <EntityType Name="SubCategoryMaster">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="SubCategoryName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="IsVisible" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CategoryMaster" Relationship="NewsIndiaTVModel.FK_SubCategoryMaster_CategoryMaster" FromRole="SubCategoryMaster" ToRole="CategoryMaster" />
+          <NavigationProperty Name="SubCategoryDataMasters" Relationship="NewsIndiaTVModel.FK_SubCategoryDataMaster_SubCategoryMaster" FromRole="SubCategoryMaster" ToRole="SubCategoryDataMaster" />
+        </EntityType>
+        <EntityType Name="UserMaster">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="MiddleName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="0" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="Boolean" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="StateID" Type="Int32" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="HasUserAccess" Type="Boolean" />
+          <Property Name="HasMenuAccess" Type="Boolean" />
+          <Property Name="HasNewsAccess" Type="Boolean" />
+          <Property Name="Pincode" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedBy" Type="Int32" />
+          <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+          <Property Name="IsEnabled" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Country" Relationship="NewsIndiaTVModel.FK_UserMaster_Country" FromRole="UserMaster" ToRole="Country" />
+          <NavigationProperty Name="States" Relationship="NewsIndiaTVModel.FK_State_UserMaster" FromRole="UserMaster" ToRole="State" />
+          <NavigationProperty Name="States1" Relationship="NewsIndiaTVModel.FK_State_UserMaster1" FromRole="UserMaster" ToRole="State" />
+          <NavigationProperty Name="State" Relationship="NewsIndiaTVModel.FK_UserMaster_State" FromRole="UserMaster" ToRole="State" />
+          <NavigationProperty Name="UserRole" Relationship="NewsIndiaTVModel.FK_UserMaster_UserMaster" FromRole="UserMaster" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="UserMasters" Relationship="NewsIndiaTVModel.FK_UserMaster_UserMaster" FromRole="UserRole" ToRole="UserMaster" />
+        </EntityType>
+        <EntityType Name="Verification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="VerificationType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AuthenticationLinks" Relationship="NewsIndiaTVModel.FK_AuthenticationLinks_Verification" FromRole="Verification" ToRole="AuthenticationLink" />
+        </EntityType>
+        <Association Name="FK_SubCategoryDataAttachment_Attachment">
+          <End Type="NewsIndiaTVModel.Attachment" Role="Attachment" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.SubCategoryDataAttachment" Role="SubCategoryDataAttachment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Attachment">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryDataAttachment">
+              <PropertyRef Name="AttachmentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AuthenticationLinks_Verification">
+          <End Type="NewsIndiaTVModel.Verification" Role="Verification" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.AuthenticationLink" Role="AuthenticationLink" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Verification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AuthenticationLink">
+              <PropertyRef Name="VerificationTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategoryMaster_CategoryMaster">
+          <End Type="NewsIndiaTVModel.CategoryMaster" Role="CategoryMaster" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.SubCategoryMaster" Role="SubCategoryMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CategoryMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryMaster">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_Country1">
+          <End Type="NewsIndiaTVModel.Country" Role="Country" Multiplicity="0..1" />
+          <End Type="NewsIndiaTVModel.State" Role="State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CountryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMaster_Country">
+          <End Type="NewsIndiaTVModel.Country" Role="Country" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.UserMaster" Role="UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="CountryId" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_UserMaster">
+          <End Type="NewsIndiaTVModel.UserMaster" Role="UserMaster" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.State" Role="State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserMaster">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="CreatedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_State_UserMaster1">
+          <End Type="NewsIndiaTVModel.UserMaster" Role="UserMaster" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.State" Role="State" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserMaster">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="State">
+              <PropertyRef Name="ModifiedBy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMaster_State">
+          <End Type="NewsIndiaTVModel.State" Role="State" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.UserMaster" Role="UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="StateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategoryDataAttachment_SubCategoryDataMaster">
+          <End Type="NewsIndiaTVModel.SubCategoryDataMaster" Role="SubCategoryDataMaster" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.SubCategoryDataAttachment" Role="SubCategoryDataAttachment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategoryDataMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryDataAttachment">
+              <PropertyRef Name="SubCategoryDataID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SubCategoryDataMaster_SubCategoryMaster">
+          <End Type="NewsIndiaTVModel.SubCategoryMaster" Role="SubCategoryMaster" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.SubCategoryDataMaster" Role="SubCategoryDataMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SubCategoryMaster">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SubCategoryDataMaster">
+              <PropertyRef Name="SubCategoryId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserMaster_UserMaster">
+          <End Type="NewsIndiaTVModel.UserRole" Role="UserRole" Multiplicity="1" />
+          <End Type="NewsIndiaTVModel.UserMaster" Role="UserMaster" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserMaster">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NewsIndiaTVModelStoreContainer" CdmEntityContainer="NewsIndiaTVEntities">
+          <EntitySetMapping Name="Attachments">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.Attachment">
+              <MappingFragment StoreEntitySet="Attachment">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AuthenticationLinks">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.AuthenticationLink">
+              <MappingFragment StoreEntitySet="AuthenticationLinks">
+                <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+                <ScalarProperty Name="UnqiueLink" ColumnName="UnqiueLink" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="VerificationTypeId" ColumnName="VerificationTypeId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CategoryMasters">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.CategoryMaster">
+              <MappingFragment StoreEntitySet="CategoryMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SideBannerMasters">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.SideBannerMaster">
+              <MappingFragment StoreEntitySet="SideBannerMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="URL" ColumnName="URL" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="StateName" ColumnName="StateName" />
+                <ScalarProperty Name="StateId" ColumnName="StateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubCategoryDataAttachments">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.SubCategoryDataAttachment">
+              <MappingFragment StoreEntitySet="SubCategoryDataAttachments">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="AttachmentID" ColumnName="AttachmentID" />
+                <ScalarProperty Name="FileName" ColumnName="FileName" />
+                <ScalarProperty Name="SubCategoryDataID" ColumnName="SubCategoryDataID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubCategoryDataMasters">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.SubCategoryDataMaster">
+              <MappingFragment StoreEntitySet="SubCategoryDataMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="IsSuperAdminApproved" ColumnName="IsSuperAdminApproved" />
+                <ScalarProperty Name="SubCategoryId" ColumnName="SubCategoryId" />
+                <ScalarProperty Name="SubmittedDate" ColumnName="SubmittedDate" />
+                <ScalarProperty Name="SavedTimeStamp" ColumnName="SavedTimeStamp" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubCategoryMasters">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.SubCategoryMaster">
+              <MappingFragment StoreEntitySet="SubCategoryMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+                <ScalarProperty Name="SubCategoryName" ColumnName="SubCategoryName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserMasters">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.UserMaster">
+              <MappingFragment StoreEntitySet="UserMaster">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsEnabled" ColumnName="IsEnabled" />
+                <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="HasNewsAccess" ColumnName="HasNewsAccess" />
+                <ScalarProperty Name="HasMenuAccess" ColumnName="HasMenuAccess" />
+                <ScalarProperty Name="HasUserAccess" ColumnName="HasUserAccess" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="StateID" ColumnName="StateID" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Verifications">
+            <EntityTypeMapping TypeName="NewsIndiaTVModel.Verification">
+              <MappingFragment StoreEntitySet="Verification">
+                <ScalarProperty Name="VerificationType" ColumnName="VerificationType" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

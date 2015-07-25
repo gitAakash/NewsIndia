@@ -1,0 +1,55 @@
+﻿@model List<BusinessClasses.UserModelGrid>
+@{
+    Layout = null;
+    //  ViewBag.Title = "ShowCategoryTable";
+}
+
+<table class="table table-striped table-hover table-bordered " id="tblUserGrid" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+
+
+            <th class="TextAlign">#</th>
+            <th class="TextAlign">Name</th>
+            <th class="TextAlign">Email</th>
+            <th class="TextAlign">Phone Number</th>
+            <th class="TextAlign">Is Admin</th>
+            <th class="TextAlign">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{   var count = 1;}
+        @foreach (var user in Model)
+        {
+
+            // var classInfo = category.IsVisible ? "success" : "danger";
+            var classInfo = "success";
+
+            <tr class="@classInfo">
+                <td class="TextAlign RowTextCss">@count</td>
+                <td class="TextAlign RowTextCss">@(user.FirstName + (user.MiddleName != null ? " " + user.MiddleName : "") + " " + @user.LastName)</td>
+                <td class="TextAlign RowTextCss">@(user.EmailId)</td>
+                <td class="TextAlign RowTextCss">@(user.PhoneNumber)</td>
+                <td class="TextAlign RowTextCss">
+                    @{if (user.IsAdmin)
+                    {
+                        <img class="ActionImages" src="~/Content/Images/check.png" />
+                    }
+                    }
+                </td>
+                <td class="TextAlign">
+
+                    <a class="AnchorCssRemove"  href="~/UserManager/AddEditUser?userId=@user.UserId">
+                        <img class="ActionImages" src="~/Content/Images/Edit.png" />
+                    </a>
+                    <a class="AnchorCssRemove" style="margin-left: 2px" onclick="RemoveUser(@user.UserId)"><img class="ActionImages" src="~/Content/Images/Delete.png" /></a>
+                </td>
+            </tr>
+
+                    count++;
+        }
+
+
+    </tbody>
+</table>

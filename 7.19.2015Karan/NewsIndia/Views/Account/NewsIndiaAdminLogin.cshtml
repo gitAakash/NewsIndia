@@ -1,0 +1,68 @@
+﻿@model NewsIndia.Models.Login
+@{
+    Layout = null;
+    ViewBag.Title = "News India Login";
+}
+
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <!--Validation Engine-->
+    <link href="~/Content/ValidationEngine/validationEngine.jquery.css" rel="stylesheet" />
+    <script src="~/Scripts/ValidationEngine/languages/jquery.validationEngine-en.js"></script>
+    <script src="~/Scripts/ValidationEngine/jquery.validationEngine.js"></script>
+    <!--Validation Engine Till Here-->
+
+    <link href="~/Content/ViewCss/AdminLogin.css" rel="stylesheet" />
+    <title>
+        @ViewBag.Title
+    </title>
+</head>
+<body class="BodyCss">
+
+    <div class="well LoginDiv">
+        @using (Html.BeginForm("NewsIndiaAdminLogin", "Account", FormMethod.Post, new { id = "frmLogin", @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            <fieldset>
+                <legend style="text-align: center">News India Login</legend>
+                <div class="form-group">
+                    <div class="col-lg-10 FormDivs">
+                        @Html.ValidationSummary(false, "", new { @class = "ValidationSummary" })
+                    </div>
+                </div>
+                <div class="form-group" style="text-align: center">
+                    @*    <label for="inputEmail" class="col-lg-2 control-label">UserName</label>*@
+                    <div class="col-lg-10 FormDivs">
+                        @Html.TextBoxFor(m => m.UserName, new { @placeholder = "UserName", @class = "form-control FormInput validate[required]", @data_prompt_position = "bottomLeft:0", @data_errormessage_value_missing = "UserName is required!" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @*        <label for="inputPassword" class="col-lg-2 control-label">Password</label>*@
+                    <div class="col-lg-10 FormDivs">
+                        @Html.PasswordFor(m => m.Password, new { @placeholder = "Password", @class = "form-control FormInput validate[required]", @data_prompt_position = "bottomLeft:0", @data_errormessage_value_missing = "Password is required!" })
+                    </div>
+                    <div class="checkbox col-lg-10 FormDivs">
+                        <label class="RememberMe">
+
+                            @Html.CheckBoxFor(m => m.RememberMe) Remember Me
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-5 FormDivs">
+                        <button type="submit" class="btn btn-primary BtnLogins BtnSubmit">Login</button>
+                        <button type="reset" class="btn btn-default BtnLogins">Reset</button>
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+
+    <script src="~/Scripts/ViewScript/Login.js"></script>
+</body>

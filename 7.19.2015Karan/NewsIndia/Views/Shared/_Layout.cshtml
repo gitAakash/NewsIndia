@@ -1,0 +1,388 @@
+﻿@using System.Activities.Statements
+@using BusinessClasses
+@using EntityProject
+@{
+    var sideBannerItems = SessionManager.GetSideBarMenuItemFromSession();
+}
+@*<style>
+        .bx-wrapper .bx-viewport {
+            -moz-box-shadow: 0 0 5px #ccc;
+            -webkit-box-shadow: 0 0 5px #ccc;
+            box-shadow: 0 0 5px #ccc;
+            border: solid #000000 8px;
+            background: #fff;
+        }
+    </style>*@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="~/Content/ViewCss/Layout.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/normalise.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Main.css" rel="stylesheet" />
+    <link href="~/Content/responsive.css" rel="stylesheet" />
+    <link href="~/Content/Calender.css" rel="stylesheet" />
+    <script src="~/Scripts/ViewScript/_Layout.js"></script>
+
+    <script src="~/Scripts/Pluging/jquery.smartmenus.min.js"></script>
+    <script src="~/Scripts/Pluging/jquery.flexslider-min.js"></script>
+    <script src="~/Scripts/Pluging/newsTicker.js"></script>
+    <script src="~/Scripts/Pluging/jquery.customSelect.min.js"></script>
+    <script src="~/Scripts/Pluging/retina-1.1.0.min.js"></script>
+    <script src="~/Scripts/Pluging/jflickrfeed.min.js"></script>
+    <script src="~/Scripts/Pluging/calendar.js"></script>
+    <script src="~/Scripts/Pluging/main.js"></script>
+
+</head>
+
+<body style="padding-top: 0px !important">
+    <div style="  position: fixed;width: 100%;  z-index: 9999;">
+        <div class="top-tool-bar">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Toolbar get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    @if (SessionManager.GetSessionInfo() != null)
+                    {
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="~/UserManager/AddEditUser?userId=@SessionManager.GetSessionInfo().Id" class="UserName">Welcome, @SessionManager.GetLoggedInUserName()</a></li>
+                            <li>
+                                <a href="~/Account/NewsIndiaAdminLogOut" style="padding: inherit;text-decoration: none;background-color: transparent"><img src="~/Content/Images/logOut.png" class="ImgLogout" /></a>
+                            </li>
+                        </ul>
+                    }
+                    else
+                    {  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        @*<ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Top 100</a></li>
+                                        <li><a href="#">Awards</a></li>
+                                        <li><a href="#">Gameplays</a></li>
+                                        <li><a href="#">Music Charts</a></li>
+                                        <li><a href="#">Trending</a></li>
+                                        <li><a href="#">Dance/Electronic</a></li>
+                                        <li><a href="#">Articles</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Adversitment</a></li>
+                                <li><a href="#">Forums</a></li>
+                                <li><a href="#">Elements</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>*@
+                        <ul class="nav navbar-nav righty">
+                            <li><a href="/UserManager/AddEditUser">Register</a></li>
+                            <li><a href="/Account/NewsIndiaAdminLogin">Log in</a></li>
+                        </ul>
+                    </div>}
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+        </div>
+
+        @*<div class="logo-top-ad">
+            <div class="container">
+                <div class="row">
+                    <!-- Magalla Logo -->
+                    <div class="logo col-lg-4">
+                        <a href="home-1.html"><img alt="" src="~/Content/Images/newsearth.jpg" style="  height: 100px;width: 344px;"></a>
+                    </div>
+                    <div class="top-banner col-lg-8">
+                        <!-- Top ad banner -->
+                        @*<a href="#"><img alt="" src="~/img/top-banner.jpg"></a>*@
+        @* </div>
+                    </div>
+                </div>
+            </div>*@
+        <div id="divMenuDashboard">
+            @{Html.RenderAction("LoadLayoutMenu", "Layout");}
+        </div>
+
+    </div>
+
+
+
+    @* <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
+            </div>
+        </div>*@
+    <div class="container body-content" style="margin-bottom: 5%">
+        <div style="margin-top:11%;">
+            @RenderBody()
+        </div>
+        <hr />
+        @*<footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>*@
+    </div>
+
+    @*<div class="main-footers">
+            <div class="container">
+                <!-- Category footer -->
+                <div class="cat-ftr-cont float-width">
+                    <div class="cat-ftr-cont-sngl lefty cat-brd-1">
+                        <h3>News</h3>
+                        <ul>
+                            <li><a href="#">Nation</a></li>
+                            <li><a href="#">World</a></li>
+                            <li><a href="#">Politics</a></li>
+                            <li><a href="#">Funny</a></li>
+                            <li><a href="#">Weather</a></li>
+                        </ul>
+                    </div>
+                    <div class="cat-ftr-cont-sngl lefty cat-brd-2">
+                        <h3>Music</h3>
+                        <ul>
+                            <li><a href="#">Hip Hop / Rap</a></li>
+                            <li><a href="#">Latino</a></li>
+                            <li><a href="#">Electronic and Disco</a></li>
+                            <li><a href="#">R&amp;B</a></li>
+                            <li><a href="#">Pop</a></li>
+                            <li><a href="#">Rock &amp; Roll</a></li>
+                            <li><a href="#">Ragga</a></li>
+                            <li><a href="#">More...</a></li>
+                        </ul>
+                    </div>
+                    <div class="cat-ftr-cont-sngl lefty cat-brd-3">
+                        <h3>TV &amp; Movies</h3>
+                        <ul>
+                            <li><a href="#">In Theaters</a></li>
+                            <li><a href="#">Showtimes &amp; Tickets</a></li>
+                            <li><a href="#">Latest Trailers</a></li>
+                            <li><a href="#">Release Calendar</a></li>
+                            <li><a href="#">TV Home</a></li>
+                            <li><a href="#">On Tonight</a></li>
+                            <li><a href="#">DVD &amp; Blu-Ray</a></li>
+                        </ul>
+                    </div>
+                    <div class="cat-ftr-cont-sngl lefty cat-brd-4">
+                        <h3>Tech</h3>
+                        <ul>
+                            <li><a href="#">Mobiles</a></li>
+                            <li><a href="#">Desktops</a></li>
+                            <li><a href="#">Outside Electronic</a></li>
+                            <li><a href="#">Sound Devices</a></li>
+                            <li><a href="#">AGD &amp; RTV</a></li>
+                        </ul>
+                    </div>
+                    <div class="cat-ftr-cont-sngl lefty cat-brd-5">
+                        <h3>Games</h3>
+                        <ul>
+                            <li><a href="#">PC</a></li>
+                            <li><a href="#">PlayStation 4</a></li>
+                            <li><a href="#">Xbox One</a></li>
+                            <li><a href="#">Mobiles</a></li>
+                            <li><a href="#">Portable Consoles</a></li>
+                            <li><a href="#">Nintendo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Info footer -->
+                <div class="info-ftr float-width">
+                    <div class="mag-info lefty">
+                        <a class="ftr-logo" href="#" data-original-title="" title=""><img alt="" src="~/img/logo-footer.png"></a>
+                        <p>Suspendisse dapibus blandit auctor. Aenean nisl felis, fermentum in ante sit amet, lobortis hendrerit nunc. Curabitur pharetra in velit at ornare... <a href="#" data-original-title="" title="">READ ABOUT US</a></p>
+                        <div class="scl-ftr float-width">
+                            <h3>STAY IN TOUCH!</h3>
+                            <ul>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="trans1 fb-ftr" data-original-title="Facebook"></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="trans1 tw-ftr" data-original-title="Twitter"></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="trans1 pin-ftr" data-original-title="Pinterest"></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="trans1 yt-ftr" data-original-title="YouTube"></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="trans1 ins-ftr" data-original-title="Instagram"></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="" class="trans1 vm-ftr" data-original-title="Vimeo"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="post-ftr lefty">
+                        <h3>LATEST POSTS</h3>
+                        <div class="pst-ftr-sngl float-width">
+                            <a href="#" class="lefty pst-ftr-img"><img alt="" src="~/img/samples/y1.jpg"></a>
+                            <h5>Pizza will be delivered by Drons</h5>
+                            <h6 class="lefty"><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                            <a href="#" class="lefty stars"><img alt="" src="~/img/4-stars.png"></a>
+                        </div>
+                        <div class="pst-ftr-sngl float-width">
+                            <a href="#" class="lefty pst-ftr-img"><img alt="" src="~/img/samples/y2.jpg"></a>
+                            <h5>YouTube as a real Television?</h5>
+                            <h6 class="lefty"><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                            <a href="#" class="lefty stars"><img alt="" src="~/img/4-stars.png"></a>
+                        </div>
+                        <div class="pst-ftr-sngl float-width">
+                            <a href="#" class="lefty pst-ftr-img"><img alt="" src="~/img/samples/y3.jpg"></a>
+                            <h5>Flying Mouse to your PC</h5>
+                            <h6 class="lefty"><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                            <a href="#" class="lefty stars"><img alt="" src="~/img/4-stars.png"></a>
+                        </div>
+                    </div>
+                    <div class="twts-ftr lefty">
+                        <h3>LATEST TWEETS</h3>
+                        <ul>
+                            <li>
+                                <p><span class="tw-uname">EiadTweets</span> Vetstibulum laoreet is are go mauris ac <span class="hsh">#vulputate</span> pellentes , justorle atus pulvinar augue.</p>
+                            </li>
+                            <li>
+                                <p><span class="tw-uname">EiadTweets</span> Vetstibulum laoreet is are go mauris ac <span class="hsh">#vulputate</span> pellentes , justorle atus pulvinar augue.</p>
+                            </li>
+                            <li>
+                                <p><span class="tw-uname">EiadTweets</span> Vetstibulum laoreet is are go mauris ac <span class="hsh">#vulputate</span> pellentes , justorle atus pulvinar augue.</p>
+                            </li>
+                        </ul>
+                        <h6><a href="#" class="all-twts righty trans1"><i class="fa fa-twitter"></i> Read all tweets</a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+    <div class="main-footers" style="bottom: 0 !important; position: fixed;z-index: 9999 /*margin-top:0px !important;*/ ">
+        <div class="container">
+            <div class="copy-rt-ftr">
+                <div class="container">
+
+                    <a href="#" class="righty">Design and development by: Karan & Akshay</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/notify.js"></script>
+
+    @*  @RenderSection("scripts", required: false)*@
+    <div id="divLoading" class="Loading" style="background-color: #FFF !important; display: none">
+        <div class="InnerLoading">
+            @*<p>
+                    <img src="~/Content/Images/Loading.gif" class="ImageLoading" />
+                </p>
+                <p id="pLoadingText" style="text-align: center">Loading..</p>*@
+            <div id="earth">
+                <div style="width: 100%;position: absolute;margin-top: 45%;font-family: times new roman;font-size: 45px;">
+                    <marquee scrollamount="20">
+
+
+                        News India
+                    </marquee>
+                </div>
+            </div>
+
+            <div id="divExtraContentsLoading" style="display:none"></div>
+        </div>
+    </div>
+</body>
+
+
+@* <body>
+
+
+
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img src="~/Content/Images/OtherSiteImages/news.png" style="float: left" />
+                    @Html.ActionLink("News India", "Index", "Home", null, new { @class = "navbar-brand", @style = "background-color:transparent;   " })
+                </div>
+                <div class="navbar-collapse collapse" id="divMenuDashboard">
+                    @{Html.RenderAction("LoadLayoutMenu", "Layout");}
+                </div>
+            </div>
+        </div>
+        $1$ Side Bar FRom HERE ref:http://www.bootply.com/100993 #1#
+        <div class="container SideBarContainer">
+            <div class="row">
+                <div class="col-md-2 navbar-left SideBarDiv" id="leftCol">
+
+                    <div class="well">
+                        <ul class="nav nav-stacked" id="sidebar">
+                            @foreach (var item in sideBannerItems)
+                            {
+                                <li>
+                                    <img src="@Url.Content("~/Content/Images/OtherSiteImages/"+item.ImageName)" class="SideBannerImg" alt="Image" />
+                                    <a href="@item.URL" class="SideBannerAnchor">@item.Name</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="col-md-10 BodyMain" id="divPartial">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        $1$ Till Here #1#
+        $1$<div class="container body-content">
+                @RenderBody()
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                </footer>
+            </div>#1#
+        <div id="divLoading" class="Loading" style="background-color: #FFF !important; display: none">
+            <div class="InnerLoading">
+                <p>
+                    <img src="~/Content/Images/Loading.gif" class="ImageLoading" />
+                </p>
+                <p id="pLoadingText" style="text-align: center">Loading..</p>
+                <div id="divExtraContentsLoading" style="display:none"></div>
+            </div>
+        </div>
+
+        <div id="earth"><div style="width: 100%;position: absolute;margin-top: 45%;font-family: times new roman;font-size: 45px;"><marquee scrollamount="20">
+
+
+    News India</marquee></div></div>
+        $1$Notif View JS #1#
+        <script src="~/Scripts/notify.js"></script>
+
+        @RenderSection("scripts", required: false)
+    </body>*@
+
+</html>

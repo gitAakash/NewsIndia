@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{06FE50E7-619A-46E9-8DAD-2F6AF90FF148}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EntityProject</RootNamespace>
+    <AssemblyName>EntityProject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalDlls\EF 6.0\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attachment.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationLink.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryMaster.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Country.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsIndia.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsIndia.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsIndia.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsIndia.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsIndia.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SideBannerMaster.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="State.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategoryDataAttachment.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategoryDataMaster.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SubCategoryMaster.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserRole.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Verification.cs">
+      <DependentUpon>NewsIndia.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="NewsIndia.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>NewsIndia.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="bin\Debug\EntityProject.dll.config" />
+    <None Include="NewsIndia.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewsIndia.edmx</DependentUpon>
+      <LastGenOutput>NewsIndia.Context.cs</LastGenOutput>
+    </None>
+    <None Include="NewsIndia.edmx.diagram">
+      <DependentUpon>NewsIndia.edmx</DependentUpon>
+    </None>
+    <None Include="NewsIndia.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>NewsIndia.edmx</DependentUpon>
+      <LastGenOutput>NewsIndia.cs</LastGenOutput>
+    </None>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\NewsIndia.csdl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\NewsIndia.msl" />
+    <None Include="obj\Debug\edmxResourcesToEmbed\NewsIndia.ssdl" />
+    <None Include="obj\Debug\EntityProject.csprojResolveAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="obj\Debug\EntityProject.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\EntityProject.dll" />
+    <Content Include="obj\Debug\EntityProject.pdb" />
+    <Content Include="obj\Debug\TempPE\NewsIndia.Context.cs.dll" />
+    <Content Include="obj\Debug\TempPE\NewsIndia.cs.dll" />
+    <Content Include="obj\Debug\TempPE\NewsIndia.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,50 @@
+﻿@model BusinessClasses.SubCategoryModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@*<div class="col-lg-pull-10">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video style="height: 50%;width: 40%;" class="embed-responsive-item" src="~/Content/Video/testVideo.mp4"></video>
+        </div>
+    </div>*@
+<style>
+    .bx-wrapper .bx-prev {
+        left: 10px !important;
+    }
+</style>
+
+<head>
+    <title>Video.js | HTML5 Video Player</title>
+    <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.bxslider.js"></script>
+    <link href="~/Content/video-js.css" rel="stylesheet" />
+    <script src="~/Scripts/video.js"></script>
+</head>
+<div>
+    <div class="col-lg-4 pull-left" style="margin-bottom: 5px;">
+        <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+               preload="auto" width="640" height="264" poster="MY_VIDEO_POSTER.jpg"
+               data-setup="{}">
+            <source src=@Url.Content("~/Content/Video/testVideo.mp4") type='video/mp4'>
+            <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+        </video>
+    </div>
+    <div class="pull-left" style="border: 2px solid #cbcdcc; margin-left: 18px;">
+        <ul class="bxSlider" style="height:10%;width:10%;margin-left:4px;">
+            <li class="border"><img src="~/Content/Images/Gallery/4510282.jpg" /></li>
+            <li class="border"><img src="~/Content/Images/Gallery/Eiffel-Tower-lanscape-Wallpaper-HD2.jpg" /></li>
+            <li class="border"><img src="~/Content/Images/Gallery/railay-beach-thailand-beach-hd-wallpaper-1920x1200-10919.jpg" /></li>
+            <li class="border"><img src="~/Content/Images/Gallery/rainy-weather-hd-wallpaper1.jpg" /></li>
+            <li class="border"><img src="~/Content/Images/Gallery/wallpaper-desktop-nacozinhacomamalves-blogspot-com-moth_-_desktop_wallpaper.jpg" /></li>
+            <li class="border"><img src="~/Content/Images/Gallery/wallpaper-hd-3151.jpg" /></li>
+            <li class="border"><img src="~/Content/Images/Gallery/wallpaper-one-1600-1200.jpg" /></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $('.bxSlider').bxSlider({ minSlides: 1, maxSlides: 4, slideWidth: 194, slideMargin: 10, adaptiveHeight: true, auto: true, autoControls: true });
+    });
+
+</script>

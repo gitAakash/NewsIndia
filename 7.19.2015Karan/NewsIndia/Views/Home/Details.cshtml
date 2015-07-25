@@ -1,0 +1,166 @@
+﻿@*@using BusinessClasses.AttachmentTypeEnum*@
+@using BusinessClasses
+@model BusinessClasses.SubCategoryModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var t = AttachmentType.Image;
+}
+@*<div class="col-lg-pull-10">
+        <div class="embed-responsive embed-responsive-4by3">
+            <video style="height: 50%;width: 40%;" class="embed-responsive-item" src="~/Content/Video/testVideo.mp4"></video>
+        </div>
+    </div>*@
+<style>
+    .bx-wrapper .bx-prev {
+        left: 10px !important;
+    }
+</style>
+<head>
+    <title>Video.js | HTML5 Video Player</title>
+    <link href="~/Content/jquery.bxslider.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.bxslider.js"></script>
+    <link href="~/Content/video-js.css" rel="stylesheet" />
+    <script src="~/Scripts/video.js"></script>
+</head>
+<div class="news-sec-1 float-width">
+    <div class="float-width sec-cont2">
+        <h3 class="sec-title">MUSIC NEWS</h3>
+        <div class="sec-1-big float-width">
+            <img alt="" class="blocky" src="http://ieiad.com/demoz/magalla/img/samples/z1.jpg">
+            <div class="sec-1-big-text lefty">
+                <h3>Famous artist share his tracks for free</h3>
+                <h6><span><i class="fa fa-user"></i>John Doe</span><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                <p>Suspendisse dapibus blandit auctor. Aenean nisl felis, fermentum in ante sit amet, lobortis hendrerit nunc. Curabitur pharetra in velit at ornare. Pellentesque vitae nibh volutpat velit feugiat euismod ut a elit. Donec in felis rutrum risus bibendum cursus. Aliquam interdum aliquam elementum ...</p>
+            </div>
+        </div>
+        <div class="sec-1-big float-width">
+            <img alt="" class="blocky" src="http://ieiad.com/demoz/magalla/img/samples/z8.jpg">
+            <div class="sec-1-big-text lefty">
+                <h3>Girl as a DJ on 2014 stage tour</h3>
+                <h6><span><i class="fa fa-user"></i>John Doe</span><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                <p>Suspendisse dapibus blandit auctor. Aenean nisl felis, fermentum in ante sit amet, lobortis hendrerit nunc. Curabitur pharetra in velit at ornare. Pellentesque vitae nibh volutpat velit feugiat euismod ut a elit. Donec in felis rutrum risus bibendum cursus. Aliquam interdum aliquam elementum ...</p>
+            </div>
+        </div>
+        <div class="sec-1-big float-width">
+            <img alt="" class="blocky" src="http://ieiad.com/demoz/magalla/img/samples/z9.jpg">
+            <div class="sec-1-big-text lefty">
+                <h3>Dont forget to hit play before listening</h3>
+                <h6><span><i class="fa fa-user"></i>John Doe</span><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                <p>Suspendisse dapibus blandit auctor. Aenean nisl felis, fermentum in ante sit amet, lobortis hendrerit nunc. Curabitur pharetra in velit at ornare. Pellentesque vitae nibh volutpat velit feugiat euismod ut a elit. Donec in felis rutrum risus bibendum cursus. Aliquam interdum aliquam elementum ...</p>
+            </div>
+        </div>
+        <div class="sec-1-big float-width">
+            <img alt="" class="blocky" src="http://ieiad.com/demoz/magalla/img/samples/z6.jpg">
+            <div class="sec-1-big-text lefty">
+                <h3>Everyone just can be a DJ, right?</h3>
+                <h6><span><i class="fa fa-user"></i>John Doe</span><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                <p>Suspendisse dapibus blandit auctor. Aenean nisl felis, fermentum in ante sit amet, lobortis hendrerit nunc. Curabitur pharetra in velit at ornare. Pellentesque vitae nibh volutpat velit feugiat euismod ut a elit. Donec in felis rutrum risus bibendum cursus. Aliquam interdum aliquam elementum ...</p>
+            </div>
+        </div>
+        <div class="sec-1-big float-width">
+            <img alt="" class="blocky" src="http://ieiad.com/demoz/magalla/img/samples/z7.jpg">
+            <div class="sec-1-big-text lefty">
+                <h3>Female vocalist created great concert</h3>
+                <h6><span><i class="fa fa-user"></i>John Doe</span><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                <p>Suspendisse dapibus blandit auctor. Aenean nisl felis, fermentum in ante sit amet, lobortis hendrerit nunc. Curabitur pharetra in velit at ornare. Pellentesque vitae nibh volutpat velit feugiat euismod ut a elit. Donec in felis rutrum risus bibendum cursus. Aliquam interdum aliquam elementum ...</p>
+            </div>
+        </div>
+    </div>
+    <div class="cat-pagintn float-width">
+        <ul>
+            <li><a class="crnt-pg">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">...</a></li>
+            <li><a href="#">22</a></li>
+        </ul>
+    </div>
+</div>
+<div class="news-sec-1 float-width">
+    <div class="float-width sec-cont2">
+        <h3 class="sec-title">MUSIC NEWS</h3>
+        <div class="sec-1-big float-width">
+            <video id="example_video_1" class="video-js vjs-default-skin blocky"
+                   controls preload="auto" width="100%" height="305"
+                   poster="http://video-js.zencoder.com/oceans-clip.png"
+                   data-setup='{"example_option":true}'>
+                <source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
+                <source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
+                <source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+            </video>
+            <div class="sec-1-big-text lefty">
+                <h3>Famous artist share his tracks for free</h3>
+                <h6><span><i class="fa fa-user"></i>John Doe</span><span><i class="fa fa-clock-o"></i>20 Jan 2014</span><span><i class="fa fa-comment-o"></i>21 comments</span></h6>
+                <p>Suspendisse dapibus blandit auctor. Aenean nisl felis, fermentum in ante sit amet, lobortis hendrerit nunc. Curabitur pharetra in velit at ornare. Pellentesque vitae nibh volutpat velit feugiat euismod ut a elit. Donec in felis rutrum risus bibendum cursus. Aliquam interdum aliquam elementum ...</p>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<div>
+    <h1 style="text-align: center;">@Model.Title</h1>
+    <div class="pull-left" style="margin-bottom: 5px;width:46%;">
+        @*<td colspan="2">*@
+        <video id="MY_VIDEO_1" class="video-js vjs-default-skin" controls
+               preload="auto" width="480px" height="264" poster="~/Content/Images/Gallery/MY_VIDEO_POSTER.jpg"
+            data-setup="{}">
+            @if (Model.Attachments != null)
+            {
+                foreach (var item in Model.Attachments)
+                {
+                    var flag = true;
+                    if (item.FileType.Equals(BusinessClasses.AttachmentType.Video) && flag == true)
+                    {
+                        <source src="@(Url.Content("~/AttachmentUploads/" + (item.FileName)))" type='video/mp4' />
+                        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href='@Url.Content("~/")' target="_blank">supports HTML5 video</a></p>
+                        flag = false;
+                    }
+                }
+            }
+        </video>
+    </div>
+</div>
+
+
+        @*</td>
+            <td colspan="3">*@
+        @* </td>*@
+  
+    <div class="right">
+        @Model.Description
+    </div>
+
+    <div class="pull-left" style="border: 2px solid #cbcdcc; margin-left: 18px;">
+        <ul class="bxSlider" style="height:10%;width:10%;margin-left:4px;">
+            @if (Model.Attachments != null) 
+            { 
+                foreach (var item in Model.Attachments)
+                {
+                     if (item.FileType == BusinessClasses.AttachmentType.Image)
+                     {
+                        <li class="border"><img src="@(Url.Content("~/AttachmentUploads/" + (item.FileName)))" /></li>
+                     }
+                }
+            }
+            @*<li class="border"><img src="~/Content/Images/Gallery/Eiffel-Tower-lanscape-Wallpaper-HD2.jpg" /></li>
+                <li class="border"><img src="~/Content/Images/Gallery/railay-beach-thailand-beach-hd-wallpaper-1920x1200-10919.jpg" /></li>
+                <li class="border"><img src="~/Content/Images/Gallery/rainy-weather-hd-wallpaper1.jpg" /></li>
+                <li class="border"><img src="~/Content/Images/Gallery/wallpaper-desktop-nacozinhacomamalves-blogspot-com-moth_-_desktop_wallpaper.jpg" /></li>
+                <li class="border"><img src="~/Content/Images/Gallery/wallpaper-hd-3151.jpg" /></li>
+                <li class="border"><img src="~/Content/Images/Gallery/wallpaper-one-1600-1200.jpg" /></li>*@
+        </ul>
+    </div>
+
+<script type="text/javascript">
+    $(function () {
+        $('.bxSlider').bxSlider({ minSlides: 1, maxSlides: 4, slideWidth: 194, slideMargin: 10, adaptiveHeight: true, auto: true, autoControls: true });
+    });
+
+</script>

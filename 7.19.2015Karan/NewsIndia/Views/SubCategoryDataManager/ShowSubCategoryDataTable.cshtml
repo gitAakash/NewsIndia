@@ -1,0 +1,54 @@
+﻿@model List<BusinessClasses.SubCategoryDataTableModel>
+@{
+    Layout = null;
+    ViewBag.Title = "ShowSubCategoryTable";
+}
+
+
+<table class="table table-striped table-hover table-bordered " id="tblSubCategoryDataGrid" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th class="TextAlign">#</th>
+            <th class="TextAlign">SubCategory Data Title</th>
+            <th class="TextAlign">SubCategory Name</th>
+            <th class="TextAlign">Category Name</th>
+            <th class="TextAlign">Status</th>
+            <th class="TextAlign">Remark</th>
+            <th class="TextAlign">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @{   var count = 1;}
+        @foreach (var subCategoryData in Model)
+        {
+
+            var classInfo = subCategoryData.SubCategoryDataShowing ? "success" : "danger";
+            var remark = (!subCategoryData.IsSubCategoryActive ? "Parent SubCategory Not Selected"
+                     : !subCategoryData.IsSubCategoryVisible ? "Parent SubCategory not set for Showing"
+                     : (!subCategoryData.IsCategoryActive) ? "Parent Category Not Selected"
+                     : (!subCategoryData.IsCategoryVisible) ? "Parent Category not set for Showing"
+                     : (!subCategoryData.IsVisible ? "Not selected for showing(Wating for Admin approval.)." : "-"));
+
+            <tr class="@classInfo">
+                <td class="TextAlign RowTextCss">@count</td>
+                <td class="TextAlign RowTextCss">@subCategoryData.SubCategoryDataTitle</td>
+                <td class="TextAlign RowTextCss">@subCategoryData.SubCategoryName</td>
+                <td class="TextAlign RowTextCss">@subCategoryData.CategoryName</td>
+                <td class="TextAlign RowTextCss">@(subCategoryData.IsVisible && subCategoryData.IsCategoryVisible ? "Showing" : "Not Showing")</td>
+                <td class="TextAlign RowTextCss">@remark</td>
+                <td class="TextAlign">
+
+                    <a class="AnchorCssRemove"  href="/SubCategoryDataManager/DisplaySubCategoryData?subCategoryDataId=@subCategoryData.SubCategoryDataId" data-target="#popup" data-whatever="Anchor" >
+                        <img class="ActionImages" src="~/Content/Images/Edit.png" />
+                    </a>
+                    <a class="AnchorCssRemove" style="margin-left: 2px" onclick="RemoveSubCategoryData(@subCategoryData.SubCategoryDataId)"><img class="ActionImages" src="~/Content/Images/Delete.png" /></a>
+                </td>
+            </tr>
+
+            count++;
+        }
+
+
+    </tbody>
+</table>

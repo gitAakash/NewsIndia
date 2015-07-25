@@ -1,0 +1,48 @@
+.LoginDiv {
+    margin-left: 30%;
+    width: 40%;
+    margin-top: 8%;
+}
+
+.BtnLogins {
+    width: 27%;
+}
+
+.BtnSubmit {
+    background-color: #3a5795 !important;
+    border-color: #3a5795 !important;
+}
+
+.FormDivs {
+    margin: auto;
+    text-align: center;
+    width: 100%;
+}
+
+.RememberMe {
+    padding-right: 31%;
+}
+
+.FormInput {
+    display: inline;
+}
+
+.BodyCss {
+    background-image: url('/Content/Images/LoginBackground.jpg');
+}
+
+.ValidationSummary {
+     list-style: none;
+    color: red;
+}
+.ValidationSummary ul {
+    list-style: none;
+    color: red;
+}
+
+@media screen and (max-width: 990px) {
+    .BtnLogins {
+        width: 100%;
+        margin-top: 2px;
+    }
+}

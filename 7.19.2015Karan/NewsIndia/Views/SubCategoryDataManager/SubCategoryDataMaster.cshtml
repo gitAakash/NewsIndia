@@ -1,0 +1,42 @@
+﻿@using BusinessClasses
+@{
+    var activeCategories = (List<ActiveCategory>)ViewBag.ActiveCategoryInfo;
+    ViewBag.Title = "SubCategoryDataMaster";
+}
+
+
+<link href="~/Content/dataTables.bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/jquery.dataTables.min.js"></script>
+<script src="~/Scripts/dataTables.bootstrap.js"></script>
+<link href="~/Content/ViewCss/SubCategoryDataMaster.css" rel="stylesheet" />
+
+@* Input Css and Js *@
+<link href="~/Content/InputCss/fileinput.min.css" rel="stylesheet"/>
+<script src="~/Scripts/fileUpload/jquery.fileupload.js"></script>
+<script src="~/Scripts/InputScript/fileinput.min.js"></script>
+
+<div class="CategoryMasterMainDiv">
+    <div class="page-header" style="margin: auto !important">
+        <h1 id="tables" style="text-align: center">Sub-Category Data Master</h1>
+
+
+        <input type="text" class="form-control" style="float:left;width: 41%" placeholder="Search SubCategory Data" id="txtSearchSubCategoryData">
+        <button type="submit" class="btn btn-default" style="margin-left:1% ">Search</button>
+        <button type="button" class="btn btn-default" style="float:right" data-toggle="modal" id="btnAddNewSubCategoryData" data-subcategoryid="0">Add Sub-Category Data</button>
+
+
+
+
+    </div>
+    <div id="divSubCategoryDataTable">
+        @{ Html.RenderAction("ShowSubCategoryDataTable");}
+    </div>
+
+    @* PopUpDivs *@
+
+
+</div>
+
+<script src="~/Scripts/ViewScript/SubCategoryDataMaster.js"></script>
+
+
